@@ -1,0 +1,175 @@
+body{
+    scroll-behavior: smooth;
+    background-color: #F6FCE5;
+}
+
+.navigation{
+    position: fixed;
+    position: relative;
+    padding-left: 4vw;
+    right: 2.27vw;
+    bottom: 1vh;
+    display: flex;
+    justify-content: space-between;
+    background-color: #ECF2DB;   
+    width: 98.8%;
+    box-shadow: 0px 2px gray;
+
+    img{
+        height: 4.85vw;
+    }
+    
+    .links{
+        position: relative;
+        right: 5vw;
+        font-size: 1.25vw;
+        padding-top: 1.7vw;
+        font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        justify-content: space-around;
+
+        a{
+            padding-left: 2.5vw;
+            text-decoration: none;
+            color: black;
+        }
+
+        #contact{
+            position: relative;
+            left: 5vw;
+            padding: 1.72vw;
+            background-color: #A8B48E;
+        }
+    }
+}
+
+#image-entreprise{
+    position: relative;
+    right: 2vw;
+    bottom: 0.4vw;
+    
+    img{
+        width: 102.55%;
+    }
+}
+
+#qui-sommes-nous{
+    position: relative;
+    top: 1vw;
+    background-color: #D9DBC6;
+    border-radius: 12px;
+    text-align: center;
+    
+    h1{
+        a{
+            font-size: 2vw;
+            text-decoration: none;
+            color: black;
+            font-style: bold;
+            font-family:cursive;
+        }
+    }
+    
+    p{
+        font-size: 1.3vw;
+        padding-bottom: 2vh;
+    }
+}
+
+#conseil-aide{
+    position: relative;
+    top: 4vw;
+    right: 2vw;
+    width: 102.55%;
+    background-color: #ECE1B6;
+    
+    ul{
+        font-size: 1.5vw;
+        padding-top: 2.5vw;
+        padding-bottom: 2.5vw;
+        padding-left: 5vw;
+        letter-spacing: 0.1vw;
+        
+        li{
+            padding-top: 1.5vh;
+        }
+    }
+}
+
+#cartes-liens{
+    position: relative;
+    right: 2vw;
+    width: 92.35%;
+    display: flex;
+    justify-content: space-around;
+    top: 2vw;
+    background-color: #EFF2DA;
+    padding: 5vw;
+    
+    .carte{
+        width: 20vw;
+        padding: 1.5vw;
+        border: 2px solid black;
+        border-radius: 20px;
+        background-color: #F8FAE3;
+        
+        img{
+            width: 6vw;
+        }
+        
+        a{
+            position: relative;
+            left: 4vw;
+            bottom: 2.3vw;
+            text-decoration: none;
+            color: black;
+            font-style: bold;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: 1.7vw;
+        }
+    }
+}
+
+#collaborateurs{
+    h1{
+        position: relative;
+        left: 17vw;
+        text-align: center;
+        background-color: #E9EDDD;
+        margin: 5vw;
+        border-radius: 15px;
+        padding: 1.1vw;
+        width: 50vw;
+        font-style: bold;
+        font-family:cursive;
+        font-size: 2vw;
+    }
+    #collabs{
+        display: flex;
+        justify-content: space-around;
+        img{   
+            width: 12vw;
+            padding-right: 8vw;
+        }
+        #fas{
+            width: 20vw;
+            margin-left: 2vw;
+        }
+    }
+}
+
+footer{
+    position: relative;
+    right: 2vw;
+    top: 3vw;
+    display: flex;
+    width: 102.55%;
+    padding: 1.5vw;
+    background-color: #C1C1AB;
+    align-items: center;
+    img{
+        position: relative;
+        left: 5vw;
+        width: 2vw;
+        padding-right: 42.5vw;
+    }
+}
