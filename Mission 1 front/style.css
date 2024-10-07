@@ -55,9 +55,11 @@ body{
 #qui-sommes-nous{
     position: relative;
     top: 1vw;
+    left: 2.5vw;
     background-color: #D9DBC6;
     border-radius: 12px;
     text-align: center;
+    width: 95%;
     
     h1{
         a{
@@ -162,7 +164,7 @@ footer{
     right: 2vw;
     top: 3vw;
     display: flex;
-    width: 102.55%;
+    width: 100%;
     padding: 1.5vw;
     background-color: #C1C1AB;
     align-items: center;
