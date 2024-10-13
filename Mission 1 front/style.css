@@ -1,11 +1,15 @@
-body{
-    scroll-behavior: smooth;
-    background-color: #F6FCE5;
-    font-family: 'Franklin Gothic', 'Arial Narrow', Arial, sans-serif;
+* {
     margin: 0;
+    padding: 0;
 }
 
-#navigation {
+body {
+    background-color: #F6FCE5;
+    scroll-behavior: smooth;
+    font-family: 'Franklin Gothic', 'Arial Narrow', Arial, sans-serif;
+}
+
+.navigation {
     background-color: #ECF2DB;
     box-shadow: 0 0.2vw 1vw 0 gray;
     position: fixed;
@@ -13,112 +17,113 @@ body{
     left: 0;
     right: 0;
     z-index: 10;
+    font-weight: bold;
+    height: 5em;
     * {
-        padding: 0;
-        margin: 0;
-    }
-}
-
-#navigation{
-    > ul > li > a {
-        padding: 0;
-        img {
-            padding-left: 2vw;
-            height: 5em;
-        }
-    }
-    ul, li {
+        height: inherit;
         list-style-type: none;
-        display: flex;
-        justify-content: space-between;
-        align-items: stretch;
-        a {
-            display: flex;
-            align-items: center;
-            padding: 2em 1vw;
-            text-decoration: none;
-            color: black;
-            font-size: 1.2em;
-        }
-        #contact{
-            background-color: #A8B48E;
-        }
+        text-decoration: none;
+        color: black;
     }
 }
 
+.navFlex {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    img {
+        margin-left: 1vw;
+    }
+}
+
+#navText li {
+    display: flex;
+    align-items: center;
+    a {
+        height: auto;
+        padding: 0 1vh;
+        font-size: 1.2em;
+    }
+}
+
+#contact {
+    background-color: #A8B48E;
+    padding: 0 2vh;
+    margin-left: 2vh;
+}
 
 
-#image-entreprise{
-    img{
+#imageEntreprise {
+    margin-top: 5em;
+    img {
         width: 100%;
     }
 }
 
-#qui-sommes-nous{
-    margin: 2vw;
-    padding: 2vw;
+
+#quiSommesNous {
     background-color: #D9DBC6;
+    margin: 1vw;
+    padding: 0.5vw;
     border-radius: 12px;
     text-align: center;
     
-    h1{
-        margin-top: 0;
-        a{
+    h1 {
+        margin-bottom: 1vh;
+        a {
             font-size: 1em;
             text-decoration: none;
             color: black;
             font-weight: bold;
-            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
         }
     }
     
-    p{
+    p {
+        margin: 1vh 0;
         font-size: 1.3em;
     }
 }
 
-#conseil-aide{
-    position: relative;
-    top: 4vw;
+
+#conseilAide {
     background-color: #ECE1B6;
-    
-    ul{
-        font-size: 1.5vw;
-        padding-top: 2.5vw;
-        padding-bottom: 2.5vw;
-        padding-left: 5vw;
+    display: flex;
+    justify-content: center;
+    margin-top: 3vh;
+    ul {
+        display: flex;
+        flex-direction: column;
+        padding: 2vh 2em;
+        gap: 0.4em;
+        font-size: 1.5em;
         letter-spacing: 0.1vw;
-        
-        li{
-            padding-top: 1.5vh;
-        }
     }
 }
 
-#cartes-liens{
-    flex-wrap: nowrap;
+#cartesLiens {
+    background-color: #EFF2DA;
     display: flex;
     justify-content: space-around;
-    top: 2vw;
-    background-color: #EFF2DA;
-    padding: 5vw;
+    flex-wrap: wrap;
+    padding: 4vh 2vw;
+    row-gap: 2vh;
+    column-gap: 1vw;
     
-    .carte{
-        min-width: 10em;
-        padding: 1em;
-        border: 0.2vw solid black;
-        border-radius: 1vw;
+    .carte {
         background-color: #F8FAE3;
+        flex-basis: 25em;
+        border: 0.15vw solid black;
+        border-radius: 3em;
+        padding: 1.2em;
         display: flex;
         align-items: center;
         
-        img{
-            width: 8em;
+        img {
+            width: 10em;
         }
         
-        a{
-            padding-left: 1vw;
-            position: relative;
+        a {
+            margin-left: 1em;
             text-decoration: none;
             color: black;
             font-weight: bold;
@@ -128,18 +133,17 @@ body{
     }
 }
 
-#collaborateurs{
-    h1{
-        position: relative;
-        text-align: center;
+#collaborateurs {
+    h1 {
         background-color: #E9EDDD;
+        text-align: center;
         margin: 5vw 30vw;
         border-radius: 1vw;
         padding: 1.1vw;
         font-family: Franklin Gothic, sans-serif;
         font-size: 2vw;
     }
-    #collabs{
+    #collabs {
         display: flex;
         justify-content: space-evenly;
         img{
@@ -151,16 +155,13 @@ body{
     }
 }
 
-footer{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 1.5vw;
+footer {
     background-color: #C1C1AB;
-    font-size: 1.1vw;
-    img{
-        position: absolute;
-        left: 5vw;
+    display: grid;
+    font-size: 1em;
+    img {
+        grid-column-start: 1;
+        grid-column-end: 2;
         width: 2vw;
     }
     p {
