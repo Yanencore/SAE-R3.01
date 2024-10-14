@@ -2,7 +2,13 @@
     margin: 0;
     padding: 0;
 }
+::-webkit-scrollbar{
+    background-color: #EFF2DA;
+}
 
+::-webkit-scrollbar-thumb{
+    background-color: #D8DAC5;
+}
 body {
     background-color: #F6FCE5;
     scroll-behavior: smooth;
@@ -71,16 +77,23 @@ body {
     h1 {
         margin-bottom: 1vh;
         a {
-            font-size: 1em;
+            font-size: 3vw;
             text-decoration: none;
             color: black;
-            font-weight: bold;
+            font-family: "Lilita One", sans-serif;
+            font-weight: 500;
+            font-style: normal;
         }
     }
     
     p {
         margin: 1vh 0;
-        font-size: 1.3em;
+        font-size: 1.1vw;
+        font-weight: 700;
+        padding-bottom: 2vh;
+        font-family: "Libre Franklin", sans-serif;
+        font-optical-sizing: auto;
+        font-style: normal;
     }
 }
 
@@ -97,6 +110,9 @@ body {
         gap: 0.4em;
         font-size: 1.5em;
         letter-spacing: 0.1vw;
+        font-family: "Krub", sans-serif;
+        font-weight: 500;
+        font-style: normal;
     }
 }
 
@@ -126,9 +142,10 @@ body {
             margin-left: 1em;
             text-decoration: none;
             color: black;
-            font-weight: bold;
-            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-            font-size: 2em;
+            font-family: "Lilita One", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 1.7vw;
         }
     }
 }
@@ -140,31 +157,25 @@ body {
         margin: 5vw 30vw;
         border-radius: 1vw;
         padding: 1.1vw;
-        font-family: Franklin Gothic, sans-serif;
+        font-family: "Libre Franklin", sans-serif;
+        font-optical-sizing: auto;
+        font-style: normal;
         font-size: 2vw;
     }
     #collabs {
         display: flex;
         justify-content: space-evenly;
         img{
-            width: 12vw;
+            width: 15vw;
+            margin-right: 13vw;
         }
         #fas{
-            width: 20vw;
+            width: 23vw;
+            margin-left: 7vw;
         }
     }
 }
 
-footer {
-    background-color: #C1C1AB;
-    display: grid;
-    font-size: 1em;
-    img {
-        grid-column-start: 1;
-        grid-column-end: 2;
-        width: 2vw;
-    }
-}
 
 #contact-nous{
     text-align: center;
@@ -231,5 +242,27 @@ footer {
         img{
             width: 10em;
         }
+    }
+}
+
+
+
+footer {
+    background-color: #C1C1AB;
+    display: grid;
+    font-size: 1em;
+    font-family: "Jua", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    img {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        width: 1vw;
+
+    }
+    p{
+        opacity: 0.45;
+        margin-left: auto;
+        margin-right: auto;
     }
 }
