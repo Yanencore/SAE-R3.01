@@ -1,0 +1,167 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #F6FCE5;
+    scroll-behavior: smooth;
+    font-family: 'Franklin Gothic', 'Arial Narrow', Arial, sans-serif;
+}
+
+.navigation {
+    background-color: #ECF2DB;
+    box-shadow: 0 0.2vw 1vw 0 gray;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    font-weight: bold;
+    height: 5em;
+    * {
+        height: inherit;
+        list-style-type: none;
+        text-decoration: none;
+        color: black;
+    }
+}
+
+.navFlex {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    img {
+        margin-left: 1vw;
+    }
+}
+
+#navText li {
+    display: flex;
+    align-items: center;
+    a {
+        height: auto;
+        padding: 0 1vh;
+        font-size: 1.2em;
+    }
+}
+
+#contact {
+    background-color: #A8B48E;
+    padding: 0 2vh;
+    margin-left: 2vh;
+}
+
+
+#imageEntreprise {
+    margin-top: 5em;
+    img {
+        width: 100%;
+    }
+}
+
+
+#quiSommesNous {
+    background-color: #D9DBC6;
+    margin: 1vw;
+    padding: 0.5vw;
+    border-radius: 12px;
+    text-align: center;
+    
+    h1 {
+        margin-bottom: 1vh;
+        a {
+            font-size: 1em;
+            text-decoration: none;
+            color: black;
+            font-weight: bold;
+        }
+    }
+    
+    p {
+        margin: 1vh 0;
+        font-size: 1.3em;
+    }
+}
+
+
+#conseilAide {
+    background-color: #ECE1B6;
+    display: flex;
+    justify-content: center;
+    margin-top: 3vh;
+    ul {
+        display: flex;
+        flex-direction: column;
+        padding: 2vh 2em;
+        gap: 0.4em;
+        font-size: 1.5em;
+        letter-spacing: 0.1vw;
+    }
+}
+
+#cartesLiens {
+    background-color: #EFF2DA;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 4vh 2vw;
+    row-gap: 2vh;
+    column-gap: 1vw;
+    
+    .carte {
+        background-color: #F8FAE3;
+        flex-basis: 20em;
+        border: 0.15vw solid black;
+        border-radius: 3em;
+        padding: 1.2em;
+        display: flex;
+        align-items: center;
+        
+        img {
+            width: 5em;
+        }
+        
+        a {
+            margin-left: 1em;
+            text-decoration: none;
+            color: black;
+            font-weight: bold;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: 2em;
+        }
+    }
+}
+
+#collaborateurs {
+    h1 {
+        background-color: #E9EDDD;
+        text-align: center;
+        margin: 5vw 30vw;
+        border-radius: 1vw;
+        padding: 1.1vw;
+        font-family: Franklin Gothic, sans-serif;
+        font-size: 2vw;
+    }
+    #collabs {
+        display: flex;
+        justify-content: space-evenly;
+        img{
+            width: 12vw;
+        }
+        #fas{
+            width: 20vw;
+        }
+    }
+}
+
+footer {
+    background-color: #C1C1AB;
+    display: grid;
+    font-size: 1em;
+    img {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        width: 2vw;
+    }
+}
