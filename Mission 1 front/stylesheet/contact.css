@@ -1,0 +1,132 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #F6FCE5;
+    scroll-behavior: smooth;
+    font-family: 'Franklin Gothic', 'Arial Narrow', Arial, sans-serif;
+}
+
+.navigation {
+    background-color: #ECF2DB;
+    box-shadow: 0 0.2vw 1vw 0 gray;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    font-weight: bold;
+    height: 5em;
+    * {
+        height: inherit;
+        list-style-type: none;
+        text-decoration: none;
+        color: black;
+    }
+}
+
+.navFlex {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    img {
+        margin-left: 1vw;
+    }
+}
+
+#navText li {
+    display: flex;
+    align-items: center;
+    a {
+        height: auto;
+        padding: 0 1vh;
+        font-size: 1.2em;
+    }
+}
+
+#contact {
+    background-color: #A8B48E;
+    padding: 0 2vh;
+    margin-left: 2vh;
+}
+
+footer {
+    background-color: #C1C1AB;
+    display: grid;
+    font-size: 1em;
+    img {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        width: 2vw;
+    }
+}
+
+#contact-nous{
+    text-align: center;
+    margin-top:7em;
+    font-size: 1.5em;
+}
+
+#formulaire-contact {
+    background-color: #D9DBC6;
+    margin-top: 5em;
+    margin-left: 20em;
+    margin-right: 20em;
+    margin-bottom: 5em;
+    border-radius: 2em;
+    align-items: center;
+    padding: 2em;
+    ul{
+        padding-top: 3em;
+        list-style-type: none;
+        text-align: center;
+        li{
+            padding: 0.5em;
+            font-size: 1.2em;
+            input{
+                width: 20em;
+                height: 2em;
+                background-color: #B4BAA6;
+                border-radius: 2em;
+            }
+            textarea{
+                width: 50em;
+                height: 20em;
+            }
+        }
+        .infos-persos{
+            display: flex;
+            justify-content: space-around;
+        }
+    }
+    #mail-content{
+        input{
+            width: 80%;
+            background-color: white;
+        }
+    }
+}
+
+#tel-adresse{
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 5em;
+    hr{
+        max-height: 30em;
+    }
+    .tel-adresse-carte{
+        padding: 2em;
+        padding-left: 5em;
+        padding-right: 5em;
+        border-radius: 2em;
+        background-color: #D9DBC6;
+        margin: 2em;
+        text-align: center;
+        max-width: 15em;
+        img{
+            width: 10em;
+        }
+    }
+}

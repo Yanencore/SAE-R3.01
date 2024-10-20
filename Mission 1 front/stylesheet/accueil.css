@@ -1,0 +1,277 @@
+@import url('https://fonts.googleapis.com/css2?family=Lilita+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Krub:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jua&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+::-webkit-scrollbar{
+    background-color: #EFF2DA;
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: #D8DAC5;
+}
+body {
+    background-color: #F6FCE5;
+    scroll-behavior: smooth;
+    font-family: 'Franklin Gothic', 'Arial Narrow', Arial, sans-serif;
+}
+
+.navigation {
+    background-color: #ECF2DB;
+    box-shadow: 0 0.2vw 1vw 0 gray;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    font-weight: bold;
+    height: 5em;
+    * {
+        height: inherit;
+        list-style-type: none;
+        text-decoration: none;
+        color: black;
+    }
+}
+
+.navFlex {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    img {
+        margin-left: 1vw;
+    }
+}
+
+#navText li {
+    display: flex;
+    align-items: center;
+    a {
+        height: auto;
+        padding: 0 2vh;
+        font-size: 1.2em;
+    }
+}
+
+#contact {
+    background-color: #A8B48E;
+    padding: 0 2vh;
+    margin-left: 2vh;
+}
+
+
+#imageEntreprise {
+    margin-top: 5em;
+    img {
+        width: 100%;
+    }
+}
+
+
+#quiSommesNous {
+    background-color: #D9DBC6;
+    margin: 1vw;
+    padding: 0.5vw;
+    border-radius: 12px;
+    text-align: center;
+    
+    h1 {
+        margin-bottom: 1vh;
+        a {
+            font-size: 3vw;
+            text-decoration: none;
+            color: black;
+            font-family: "Lilita One", sans-serif;
+            font-weight: 500;
+            font-style: normal;
+        }
+    }
+    
+    p {
+        margin: 1vh 0;
+        font-size: 1.1vw;
+        font-weight: 700;
+        padding-bottom: 2vh;
+        font-family: "Libre Franklin", sans-serif;
+        font-optical-sizing: auto;
+        font-style: normal;
+    }
+}
+
+
+#conseilAide {
+    background-color: #ECE1B6;
+    display: flex;
+    justify-content: center;
+    margin-top: 3vh;
+    ul {
+        display: flex;
+        flex-direction: column;
+        padding: 2vh 2em;
+        gap: 0.4em;
+        font-size: 1.5em;
+        letter-spacing: 0.1vw;
+        font-family: "Krub", sans-serif;
+        font-weight: 500;
+        font-style: normal;
+    }
+}
+
+#cartesLiens {
+    background-color: #EFF2DA;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 4vh 2vw;
+    row-gap: 2vh;
+    column-gap: 1vw;
+    
+    .carte {
+        background-color: #F8FAE3;
+        flex-basis: 20em;
+        border: 0.15vw solid black;
+        border-radius: 3em;
+        padding: 1.2em;
+        display: flex;
+        align-items: center;
+        
+        img {
+            width: 5em;
+        }
+        
+        a {
+            margin-left: 1em;
+            text-decoration: none;
+            color: black;
+            font-family: "Lilita One", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 1.7vw;
+        }
+    }
+}
+
+#collaborateurs {
+    h1 {
+        background-color: #E9EDDD;
+        text-align: center;
+        margin: 5vw 30vw;
+        border-radius: 1vw;
+        padding: 1.1vw;
+        font-family: "Libre Franklin", sans-serif;
+        font-optical-sizing: auto;
+        font-style: normal;
+        font-size: 2vw;
+    }
+    #collabs {
+        display: flex;
+        justify-content: space-evenly;
+        #fas{
+            width: 23vw;
+            margin-left: 7vw;
+        }
+        #pLoire{
+            width: 15vw;
+            margin-right: 13vw;
+        }
+        #medEu{
+            width: 14vw;
+            margin-bottom: 50px;
+        }
+    }
+}
+
+
+#contact-nous{
+    text-align: center;
+    margin-top:7em;
+    font-size: 1.5em;
+}
+
+#formulaire-contact {
+    background-color: #D9DBC6;
+    margin-top: 5em;
+    margin-left: 20em;
+    margin-right: 20em;
+    margin-bottom: 5em;
+    border-radius: 2em;
+    align-items: center;
+    padding: 2em;
+    ul{
+        padding-top: 3em;
+        list-style-type: none;
+        text-align: center;
+        li{
+            padding: 0.5em;
+            font-size: 1.2em;
+            input{
+                width: 20em;
+                height: 2em;
+                background-color: #B4BAA6;
+                border-radius: 2em;
+            }
+            textarea{
+                width: 50em;
+                height: 20em;
+            }
+        }
+        .infos-persos{
+            display: flex;
+            justify-content: space-around;
+        }
+    }
+    #mail-content{
+        input{
+            width: 80%;
+            background-color: white;
+        }
+    }
+}
+
+#tel-adresse{
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 5em;
+    hr{
+        max-height: 30em;
+    }
+    .tel-adresse-carte{
+        padding: 2em;
+        padding-left: 5em;
+        padding-right: 5em;
+        border-radius: 2em;
+        background-color: #D9DBC6;
+        margin: 2em;
+        text-align: center;
+        max-width: 15em;
+        img{
+            width: 10em;
+        }
+    }
+}
+
+
+
+footer {
+    background-color: #C1C1AB;
+    display: grid;
+    font-size: 1em;
+    font-family: "Jua", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    img {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        width: 1vw;
+
+    }
+    p{
+        opacity: 0.45;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
