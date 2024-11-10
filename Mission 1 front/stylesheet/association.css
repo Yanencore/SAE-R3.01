@@ -60,9 +60,182 @@
     }
 }
 
-#button{
+
+
+#aide{
+
+    background-color: #EEF3CD;
     h1{
-        padding-right: 500px;
+        font-size: 3.5vw;
+        padding-top: 5vh;
+        font-family: "Lilita One", sans-serif;
+        font-weight: 500;
+        font-style: normal;
+        margin-left: 7.5em;
+
+        .firstLetter {
+            color: #C29FC3;
+        }
+    }
+    #container{
+        display: flex;
+        justify-content: center;
+        gap: 2em;
+        padding: 2em;
+
+
+        #DivButton{
+            background-color: #ECE1B6;
+            display: flex;
+            overflow:auto;
+            width: 62.5em;
+            height: 35.313em;
+            border-radius: 5em;
+
+            margin-top: 2em;
+            box-shadow:  20px 20px 63px #c4bb97,
+            -20px -20px 63px #ffffd5;
+
+
+            #liBtn{
+                float:left;
+                width:60%;
+
+                li{
+                    list-style-type: none;
+                    margin-top: 2em;
+
+                }
+
+            }
+            #liTxt{
+                width: 40%;
+                font-family: "Lilita One", sans-serif;
+                font-weight: 500;
+                font-style: normal;
+                font-size: 1.7vw;
+                margin-right: 8em;
+                white-space: nowrap;
+
+
+                li{
+                    list-style-type: none;
+                    margin-top: 2em;
+                }
+                li:not(:first-child) {
+                    margin-top: 2.9em;
+
+                }
+
+            }
+            .NeumorphismButton{
+                img{
+                    width: 65%;
+                }
+                width: 100px;
+                height: 100px;
+                margin-left: 12em;
+                border: none;
+                border-radius: 50%;
+                background: #ECE1B6;
+                box-shadow:  20px 20px 40px #c6bd99,
+                -20px -20px 40px #ffffd3;
+                transition: all 0.9s ease;
+            }
+
+            .NeumorphismButton:hover{
+                background: linear-gradient(145deg, #d4cba4, #fdf1c3);
+                box-shadow:  20px 20px 40px #c6bd99,
+                -20px -20px 40px #ffffd3;
+                cursor: pointer;
+            }
+
+            .NeumorphismButton.active{
+                background: #ECE1B6;
+                box-shadow: inset 20px 20px 40px #c6bd99,
+                inset -20px -20px 40px #ffffd3;
+                transform: scale(0.95);
+            }
+
+        }
+
+        #img-note{
+            background-color: #ECE1B6;
+            display: flex;
+            width: 31.25em;
+            height: 37.375em;
+            border-radius: 5em;
+            justify-content: center;
+            align-items: center;
+
+            box-shadow:  20px 20px 63px #c4bb97,
+            -20px -20px 63px #ffffd5;
+
+            img{
+                width: 100%;
+                height: 95%;
+
+            }
+
+        }
     }
 
+    #textContainer{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 96em;
+        height: 20em;
+        background-color: #ECE1B6;
+        border-radius: 3em;
+        box-shadow:  20px 20px 63px #c4bb97,
+        -20px -20px 63px #ffffd5;
+        padding: 1em;
+        text-align: center;
+        margin: 20px auto;
+
+        #changingText {
+            font-family: "Lilita One", sans-serif;
+            font-weight: 500;
+            font-style: normal;
+            font-optical-sizing: auto;
+            font-size: 2.9vw;
+            transition: opacity 0.5s ease;
+            word-wrap: break-word;
+            max-width: 100%;
+            opacity: 75%;
+
+        }
+    }
+
+    #BtnMore{
+        margin-left: 132em;
+        margin-bottom: 2em;
+        height: 6em;
+        width: 6em;
+        border: none;
+        background: #ECE1B6;
+        box-shadow:  6px 6px 12px #d7cda6,
+        -6px -6px 12px #fff5c6;
+        border-radius: 15%;
+
+
+        img{
+            margin-top: 5px;
+            width: 65%;
+        }
+    }
+
+    #BtnMore:hover{
+        background: linear-gradient(145deg, #d4cba4, #fdf1c3);
+        box-shadow:  6px 6px 12px #d7cda6,
+        -6px -6px 12px #fff5c6;
+    }
+
+    #BtnMore:active{
+        box-shadow: inset 6px 6px 12px #d7cda6,
+        inset -6px -6px 12px #fff5c6;
+    }
 }
+
+

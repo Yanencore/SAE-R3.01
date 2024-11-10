@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="stylesheet/association.css">
     <script src="jquery.js"></script>
     <script src="menu.js"></script>
+    <script src="associationBtn.js"></script>
 </head>
 <body>
     <header></header>
@@ -41,34 +42,41 @@
                 de santé publiques et privées ainsi que dans les instances administratives et sociales.
             </p>
     </div>
-        <h1>L’aide apportée</h1>
 
-        <div id="button">
-                <ul>
-                    <li><button><img src="images/association/folder.png" alt="image-dossier"></button></li>
-                    <li><button><img src="images/association/give-money.png" alt="image-indemnisation"></button></li>
-                    <li><button><img src="images/association/auction.png" alt="image-tribunal"></button></li>
-                    <li><button><img src="images/association/relationship.png" alt="image-négociation"></button></li>
+    <div id="aide">
+        <h1><span class="firstLetter">L</span>’aide apportée</h1>
+
+        <div id="container">
+            <div id="DivButton">
+                <ul id = "liBtn">
+                    <li><button id="BtnDossier" class ="NeumorphismButton active" ><img src="images/association/folder.png" alt="image-dossier"></button></li>
+                    <li><button id="BtnIndemn" class="NeumorphismButton"><img src="images/association/give-money.png" alt="image-indemnisation"></button></li>
+                    <li><button id="BtnJur" class="NeumorphismButton"><img src="images/association/auction.png" alt="image-tribunal"></button></li>
+                    <li><button id="BtnNego" class="NeumorphismButton"><img src="images/association/relationship.png" alt="image-négociation"></button></li>
                 </ul>
-                <ul>
+                <ul id = liTxt>
                     <li>Elaboration d’un dossier médical</li>
                     <li>L’indemnisation de vos préjudices</li>
                     <li>Assistance juridique et droits des victimes</li>
                     <li>Négociation et résolution des conflits</li>
                 </ul>
+
+            </div>
+            <div id="img-note">
+                <img src="images/association/note.png" alt="image-bloc-note">
+            </div>
         </div>
 
-        <div id="img-note">
-            <img src="images/association/note.png" alt="image-bloc-note">
+
+
+        <div id="textContainer">
+            <span id="changingText">C.A.D.U.S. vous aide à obtenir votre dossier médical et à constituer votre demande
+                d'indemnisation,en veillant à éviter les erreurs ou omissions. Ils vous conseillent tout
+                au long de votre parcours jusqu'à l'indemnisation.
+            </span>
         </div>
 
-        <div id="text">
-            <p>TEXTE</p>
-        </div>
-
-    <button><img src="images/association/more.png" alt="more"></button>
-    <div id="aide">
-
+        <button id="BtnMore"><img src="images/association/more.png" alt="more"></button>
     </div>
     <footer></footer>
 </body>
