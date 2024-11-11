@@ -1,7 +1,6 @@
 
 
 #imageEntreprise {
-    margin-top: 5em;
     img {
         width: 100%;
     }
@@ -18,7 +17,7 @@
     h1 {
         margin-bottom: 1vh;
         a {
-            font-size: 3vw;
+            font-size: 1.8em;
             text-decoration: none;
             color: black;
             font-family: "Lilita One", sans-serif;
@@ -29,8 +28,8 @@
     
     p {
         margin: 1vh 0;
-        font-size: 1.1vw;
-        font-weight: 700;
+        font-size: 1.4em;
+        font-weight: 600;
         padding-bottom: 2vh;
         font-family: "Libre Franklin", sans-serif;
         font-optical-sizing: auto;
@@ -44,6 +43,7 @@
     display: flex;
     justify-content: center;
     margin-top: 3vh;
+
     ul {
         display: flex;
         flex-direction: column;
@@ -51,8 +51,8 @@
         gap: 0.4em;
         font-size: 1.5em;
         letter-spacing: 0.1vw;
-        font-family: "Krub", sans-serif;
-        font-weight: 500;
+        font-family: "Libre Franklin", sans-serif;
+        font-weight: 600;
         font-style: normal;
     }
 }
@@ -70,7 +70,7 @@
         background-color: #F8FAE3;
         flex-basis: 20em;
         border: 0.15vw solid black;
-        border-radius: 3em;
+        border-radius: 2em;
         padding: 1.2em;
         display: flex;
         align-items: center;
@@ -92,31 +92,32 @@
 }
 
 #collaborateurs {
-    h1 {
-        background-color: #E9EDDD;
-        text-align: center;
-        margin: 5vw 30vw;
-        border-radius: 1vw;
-        padding: 1.1vw;
-        font-family: "Libre Franklin", sans-serif;
-        font-optical-sizing: auto;
-        font-style: normal;
-        font-size: 2vw;
+    padding: 2vw 0;
+
+    #collabTitle {
+        display: flex;
+        justify-content: center;
+        padding-bottom: 2em;
+
+        h1 {
+            background-color: #E9EDDD;
+            text-align: center;
+            border-radius: 0.3em;
+            padding: 0.2em 6vw;
+            font-family: "Lilita One", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 3em;
+        }
     }
+
     #collabs {
         display: flex;
-        justify-content: space-evenly;
-        #fas{
-            width: 23vw;
-            margin-left: 7vw;
-        }
-        #pLoire{
-            width: 15vw;
-            margin-right: 13vw;
-        }
-        #medEu{
-            width: 14vw;
-            margin-bottom: 50px;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        a > img {
+            user-select: none;
+            height: 10em;
         }
     }
 }
@@ -126,68 +127,6 @@
     text-align: center;
     margin-top:7em;
     font-size: 1.5em;
-}
-
-#formulaire-contact {
-    background-color: #D9DBC6;
-    margin-top: 5em;
-    margin-left: 20em;
-    margin-right: 20em;
-    margin-bottom: 5em;
-    border-radius: 2em;
-    align-items: center;
-    padding: 2em;
-    ul{
-        padding-top: 3em;
-        list-style-type: none;
-        text-align: center;
-        li{
-            padding: 0.5em;
-            font-size: 1.2em;
-            input{
-                width: 20em;
-                height: 2em;
-                background-color: #B4BAA6;
-                border-radius: 2em;
-            }
-            textarea{
-                width: 50em;
-                height: 20em;
-            }
-        }
-        .infos-persos{
-            display: flex;
-            justify-content: space-around;
-        }
-    }
-    #mail-content{
-        input{
-            width: 80%;
-            background-color: white;
-        }
-    }
-}
-
-#tel-adresse{
-    display: flex;
-    justify-content: space-around;
-    margin-bottom: 5em;
-    hr{
-        max-height: 30em;
-    }
-    .tel-adresse-carte{
-        padding: 2em;
-        padding-left: 5em;
-        padding-right: 5em;
-        border-radius: 2em;
-        background-color: #D9DBC6;
-        margin: 2em;
-        text-align: center;
-        max-width: 15em;
-        img{
-            width: 10em;
-        }
-    }
 }
 
 

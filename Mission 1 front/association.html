@@ -14,60 +14,66 @@
     <header></header>
 
     <div id="CADUS">
-        <h1><span class="firstLetter">C</span>ONSEIL<br>
-            <span class="firstLetter">A</span>IDE<br>
-            <span class="firstLetter">D</span>EFENSE <span class="article">des</span><br>
-            <span class="firstLetter">U</span>SAGERS <span class="article">de la</span><br>
-            <span class="firstLetter">S</span>ANTE<br>
-        </h1>
+        <ul>
+            <li class="letterColor">CONSEIL</li>
+            <li class="letterColor">AIDE</li>
+            <li class="letterColor">DEFENSE <span class="article">des</span></li>
+            <li class="letterColor">USAGERS <span class="article">de la</span></li>
+            <li class="letterColor">SANTÉ</li>
+        </ul>
         <img src="images/association/doctor.png" alt="image medecin">
     </div>
 
     <div id="But">
-            <h1><span class="firstLetter ">N</span>otre But</h1>
+            <h1 class="letterColor">Notre But</h1>
             <h2> Aide, Conseil et Défense des Usagers de la Santé</h2>
-            <p>
+            <div>
+                <p>
                 Notre association s'engage à vous accompagner sur le plan juridique et judiciaire afin
                 de défendre vos droits en tant qu'usager du système de santé. Nous vous apportons une
                 aide précieuse dans l'obtention de votre dossier médical et vous assistons dans la
                 constitution de votre demande d'indemnisation pour vous éviter toute erreur ou oubli.
                 Nous sommes à vos côtés tout au long de votre parcours, jusqu'à l'obtention de votre indemnisation.
-            </p>
+                </p>
+            </div>
             <h2>Défense des Victimes et Représentation des Usagers</h2>
-            <p>
-                Nous informons et soutenons les victimes d'accidents médicaux, d'infections nosocomiales
-                ou d'aléas thérapeutiques, ainsi que leurs proches, en leur offrant toute l'aide que
-                l'association peut fournir. Nous participons activement à leur défense judiciaire,
-                assurons la protection de leurs intérêts, et les représentons dans les instances
-                de santé publiques et privées ainsi que dans les instances administratives et sociales.
-            </p>
+            <div>
+                <p>
+                    Nous informons et soutenons les victimes d'accidents médicaux, d'infections nosocomiales
+                    ou d'aléas thérapeutiques, ainsi que leurs proches, en leur offrant toute l'aide que
+                    l'association peut fournir. Nous participons activement à leur défense judiciaire,
+                    assurons la protection de leurs intérêts, et les représentons dans les instances
+                    de santé publiques et privées ainsi que dans les instances administratives et sociales.
+                </p>
+            </div>
     </div>
 
     <div id="aide">
-        <h1><span class="firstLetter">L</span>’aide apportée</h1>
+        <h1 class="letterColor">L’aide apportée</h1>
 
         <div id="container">
-            <div id="DivButton">
-                <ul id = "liBtn">
-                    <li><button id="BtnDossier" class ="NeumorphismButton active" ><img src="images/association/folder.png" alt="image-dossier"></button></li>
-                    <li><button id="BtnIndemn" class="NeumorphismButton"><img src="images/association/give-money.png" alt="image-indemnisation"></button></li>
-                    <li><button id="BtnJur" class="NeumorphismButton"><img src="images/association/auction.png" alt="image-tribunal"></button></li>
-                    <li><button id="BtnNego" class="NeumorphismButton"><img src="images/association/relationship.png" alt="image-négociation"></button></li>
-                </ul>
-                <ul id = liTxt>
-                    <li>Elaboration d’un dossier médical</li>
-                    <li>L’indemnisation de vos préjudices</li>
-                    <li>Assistance juridique et droits des victimes</li>
-                    <li>Négociation et résolution des conflits</li>
-                </ul>
-
-            </div>
+            <ul id= "boutonAide">
+                <li>
+                    <button id="BtnDossier" class ="NeumorphismButton active" ><img src="images/association/folder.png" alt="image-dossier"></button>
+                    <span>Elaboration d’un dossier médical</span>
+                </li>
+                <li>
+                    <button id="BtnIndemn" class="NeumorphismButton"><img src="images/association/give-money.png" alt="image-indemnisation"></button>
+                    <span>L’indemnisation de vos préjudices</span>
+                </li>
+                <li>
+                    <button id="BtnJur" class="NeumorphismButton"><img src="images/association/auction.png" alt="image-tribunal"></button>
+                    <span>Assistance juridique et droits des victimes</span>
+                </li>
+                <li>
+                    <button id="BtnNego" class="NeumorphismButton"><img src="images/association/relationship.png" alt="image-négociation"></button>
+                    <span>Négociation et résolution des conflits</span>
+                </li>
+            </ul>
             <div id="img-note">
                 <img src="images/association/note.png" alt="image-bloc-note">
             </div>
         </div>
-
-
 
         <div id="textContainer">
             <span id="changingText">C.A.D.U.S. vous aide à obtenir votre dossier médical et à constituer votre demande
@@ -76,7 +82,9 @@
             </span>
         </div>
 
-        <button id="BtnMore"><img src="images/association/more.png" alt="more"></button>
+        <div id="BtnMore">
+            <button><img src="images/association/more.png" alt="more"></button>
+        </div>
     </div>
     <footer></footer>
 </body>

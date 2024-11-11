@@ -1,238 +1,232 @@
+.letterColor::first-letter {
+    color: #C29FC3;
+}
 
-#CADUS{
+h1 {
+    font-size: 4.8em;
+    font-family: "Lilita One", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
 
+#CADUS {
     background-color: #F6F6DB;
-    h1{
-        margin-top: 1.7em;
+    display: flex;
+    justify-content: space-around;
+
+    ul {
+        margin-top: 0.2em;
+        list-style-type: none;
         font-family: "Lilita One", sans-serif;
         font-weight: 500;
         font-style: normal;
         margin-left: 3vh;
-        font-size: 4vw;
+        font-size: 4em;
 
-
-        .firstLetter {
-        color: #C29FC3;
-        }
         .article{
-            font-size: 2vw;
+            font-size: 0.5em;
         }
     }
 
-    display: flex;
-    justify-content: space-between;
+    img {
+        height: 23em;
+    }
+    @media only screen and (max-width: 47em) {
+        img {
+            display: none;
+        }
 
-    img{
-        margin-right: 20vh;
-        margin-top: 4em;
+        justify-content: left;
     }
 }
 
 #But{
-
     background-color: #F2F6CC;
     text-align: center;
-    h1{
-        font-size: 3.5vw;
-        padding-top: 5vh;
-        font-family: "Lilita One", sans-serif;
-        font-weight: 500;
-        font-style: normal;
+    font-family: "Lilita One", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    padding-top: 5vh;
+    padding-bottom: 8em;
 
-        .firstLetter {
-            color: #C29FC3;
+    h2 {
+        padding-top: 1.6em;
+        padding-bottom: 0.8em;
+        font-size: 3.5em;
+    }
+
+    div {
+        display: flex;
+        justify-content: center;
+
+        p {
+            width: 27em;
+            font-size: 3.2em;
+            opacity: 66%;
         }
-    }
-    h2{
-        line-height: 5.5vw;
-        font-size: 2.4vw;
-        font-family: "Lilita One", sans-serif;
-        font-weight: 500;
-        font-style: normal;
-    }
-    p{
-        padding: 0 45vh;
-        font-size: 2.5vw;
-        font-family: "Lilita One", sans-serif;
-        font-weight: 500;
-        font-style: normal;
-        opacity: 66%;
     }
 }
 
 
 
-#aide{
-
+#aide {
     background-color: #EEF3CD;
-    h1{
-        font-size: 3.5vw;
-        padding-top: 5vh;
-        font-family: "Lilita One", sans-serif;
-        font-weight: 500;
-        font-style: normal;
-        margin-left: 7.5em;
 
-        .firstLetter {
-            color: #C29FC3;
-        }
+    h1 {
+        margin-right: 4em;
+        text-align: center;
     }
-    #container{
+
+    #container {
         display: flex;
         justify-content: center;
         gap: 2em;
-        padding: 2em;
+        padding: 0 2em 2em;
 
-
-        #DivButton{
+        #boutonAide {
+            display: grid;
+            padding: 2em 0;
+            justify-content: center;
+            gap: 2em;
             background-color: #ECE1B6;
-            display: flex;
-            overflow:auto;
             width: 62.5em;
             height: 35.313em;
             border-radius: 5em;
-
             margin-top: 2em;
             box-shadow:  20px 20px 63px #c4bb97,
             -20px -20px 63px #ffffd5;
 
+            li {
+                display: grid;
+                grid-template-columns: 10em auto;
+                align-items: center;
+                list-style-type: none;
 
-            #liBtn{
-                float:left;
-                width:60%;
-
-                li{
-                    list-style-type: none;
-                    margin-top: 2em;
-
+                span {
+                    margin-left: 3vw;
+                    margin-right: 1em;
+                    font-family: "Lilita One", sans-serif;
+                    font-weight: 500;
+                    font-style: normal;
+                    font-size: 2em;
                 }
-
             }
-            #liTxt{
-                width: 40%;
-                font-family: "Lilita One", sans-serif;
-                font-weight: 500;
-                font-style: normal;
-                font-size: 1.7vw;
-                margin-right: 8em;
-                white-space: nowrap;
-
-
-                li{
-                    list-style-type: none;
-                    margin-top: 2em;
-                }
-                li:not(:first-child) {
-                    margin-top: 2.9em;
-
-                }
-
-            }
-            .NeumorphismButton{
-                img{
-                    width: 65%;
-                }
-                width: 100px;
-                height: 100px;
-                margin-left: 12em;
-                border: none;
-                border-radius: 50%;
-                background: #ECE1B6;
-                box-shadow:  20px 20px 40px #c6bd99,
-                -20px -20px 40px #ffffd3;
-                transition: all 0.9s ease;
-            }
-
-            .NeumorphismButton:hover{
-                background: linear-gradient(145deg, #d4cba4, #fdf1c3);
-                box-shadow:  20px 20px 40px #c6bd99,
-                -20px -20px 40px #ffffd3;
-                cursor: pointer;
-            }
-
-            .NeumorphismButton.active{
-                background: #ECE1B6;
-                box-shadow: inset 20px 20px 40px #c6bd99,
-                inset -20px -20px 40px #ffffd3;
-                transform: scale(0.95);
-            }
-
         }
 
-        #img-note{
-            background-color: #ECE1B6;
-            display: flex;
-            width: 31.25em;
-            height: 37.375em;
-            border-radius: 5em;
-            justify-content: center;
-            align-items: center;
-
-            box-shadow:  20px 20px 63px #c4bb97,
-            -20px -20px 63px #ffffd5;
-
+        .NeumorphismButton{
             img{
-                width: 100%;
-                height: 95%;
-
+                width: 65%;
+                height: auto;
             }
+            width: 100px;
+            height: 100px;
+            justify-self: right;
+            border: none;
+            border-radius: 50%;
+            background: #ECE1B6;
+            box-shadow:  20px 20px 40px #c6bd99,
+            -20px -20px 40px #ffffd3;
+            transition: all 0.9s ease;
+        }
 
+        .NeumorphismButton:hover{
+            background: linear-gradient(145deg, #d4cba4, #fdf1c3);
+            box-shadow:  20px 20px 40px #c6bd99,
+            -20px -20px 40px #ffffd3;
+            cursor: pointer;
+        }
+
+        .NeumorphismButton.active{
+            background: #ECE1B6;
+            box-shadow: inset 20px 20px 40px #c6bd99,
+            inset -20px -20px 40px #ffffd3;
+            transform: scale(0.95);
         }
     }
 
-    #textContainer{
+    #img-note{
+        background-color: #ECE1B6;
+        border-radius: 5em;
         display: flex;
         align-items: center;
-        justify-content: center;
-        width: 96em;
-        height: 20em;
-        background-color: #ECE1B6;
-        border-radius: 3em;
+        justify-items: center;
         box-shadow:  20px 20px 63px #c4bb97,
         -20px -20px 63px #ffffd5;
-        padding: 1em;
-        text-align: center;
-        margin: 20px auto;
 
-        #changingText {
-            font-family: "Lilita One", sans-serif;
-            font-weight: 500;
-            font-style: normal;
-            font-optical-sizing: auto;
-            font-size: 2.9vw;
-            transition: opacity 0.5s ease;
-            word-wrap: break-word;
-            max-width: 100%;
-            opacity: 75%;
-
+        img{
+            width: 100%;
+            height: auto;
         }
     }
 
-    #BtnMore{
-        margin-left: 132em;
+@media only screen and (max-width: 80em) {
+    #img-note {
+        display: none;
+    }
+
+    h1 {
+        margin-right: 0;
+    }
+    #boutonAide {
+        flex:1;
+    }
+}
+}
+
+#textContainer{
+    padding: 0 2em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    #changingText {
+        width: 31em;
+        text-align: center;
+        padding: 0.5em;
+        background-color: #ECE1B6;
+        box-shadow:  20px 20px 63px #c4bb97,
+        -20px -20px 63px #ffffd5;
+        border-radius: 1em;
+        font-family: "Lilita One", sans-serif;
+        font-weight: 500;
+        font-style: normal;
+        font-optical-sizing: auto;
+        font-size: 3em;
+        transition: opacity 0.5s ease;
+        opacity: 75%;
+
+    }
+}
+
+#BtnMore{
+    margin-top: 1.5em;
+    display: flex;
+    justify-content: center;
+    button {
+        margin-left: 120em;
         margin-bottom: 2em;
         height: 6em;
         width: 6em;
         border: none;
         background: #ECE1B6;
-        box-shadow:  6px 6px 12px #d7cda6,
+        box-shadow: 6px 6px 12px #d7cda6,
         -6px -6px 12px #fff5c6;
         border-radius: 15%;
 
 
-        img{
+
+        img {
             margin-top: 5px;
             width: 65%;
         }
     }
+    button:hover {
+         background: linear-gradient(145deg, #d4cba4, #fdf1c3);
+         box-shadow: 6px 6px 12px #d7cda6,
+         -6px -6px 12px #fff5c6;
+     }
 
-    #BtnMore:hover{
-        background: linear-gradient(145deg, #d4cba4, #fdf1c3);
-        box-shadow:  6px 6px 12px #d7cda6,
-        -6px -6px 12px #fff5c6;
-    }
-
-    #BtnMore:active{
+    button:active {
         box-shadow: inset 6px 6px 12px #d7cda6,
         inset -6px -6px 12px #fff5c6;
     }
