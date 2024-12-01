@@ -45,12 +45,22 @@
             <div id="mail-content">
                 <ul>
                     <li>
-                        <label for="object">Objet</label> <br>
-                        <input type="text" id="object-content">
+                        <label>Sujet</label> <br>
+                        <select name="Sujet" id="subject ">
+                            <option value="RDV">Demande de rendez-vous</option>
+                            <option value="Jur">Conseil juridique</option>
+                            <option value="med">Aide pour le dossier médical</option>
+                            <option value="autre">Autre</option>
+                        </select>
                     </li>
                     <li>
-                        <label for="message">Votre message</label> <br>
+                        <label>Votre message</label> <br>
                         <textarea name="message" id="message-content"></textarea>
+                    </li>
+                    <li>
+                        <button type="submit">
+                            <img src="images/contact/arrow.png" alt="Envoyer" id="#Btn-send">
+                        </button>
                     </li>
                 </ul>
             </div>  
@@ -61,20 +71,20 @@
     <div id="tel-adresse">
         <div class="tel-adresse-carte">
             <img src="images/contact/icon-mobile.png" alt="">
-            <h1>
-                Par téléphone : <br>
-                02 41 45 18 45
+            <h1 id="hPhone">
+                Mobile :<br>
+               <span>02 41 45 18 45</span>
             </h1>
-            <p>De Lundi à Samedi, entre 8h et 19h.</p>
+            <p id="txtHorairesP">De Lundi à Samedi, entre 8h et 19h.</p>
         </div>
         <hr>
         <div class="tel-adresse-carte">
             <img src="images/contact/icon-batiment.png" alt="">
-            <h1>
+            <h1 id="hLocation">
                 Adresse : <br>
-                8, rue Jean Giono, 49100 Angers
+               <span> <u>8, rue Jean Giono, 49100 Angers</u></span>
             </h1>
-            <p>De Lundi à Samedi, entre 8h et 19h.</p>
+            <p id="txtHorairesL">De Lundi à Samedi, entre 8h et 19h.</p>
         </div>
     </div>
 

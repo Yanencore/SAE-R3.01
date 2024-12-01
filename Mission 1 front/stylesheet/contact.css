@@ -1,46 +1,82 @@
 
+
+
 #contact-nous{
     text-align: center;
-    margin-top:7em;
+    margin-top:5em;
     font-size: 1.5em;
 }
 
 #formulaire-contact {
     background-color: #D9DBC6;
-    margin-top: 5em;
-    margin-left: 20em;
-    margin-right: 20em;
-    margin-bottom: 5em;
+    margin: 5em 32em;
+    width: 40em;
+
     border-radius: 2em;
     align-items: center;
     padding: 2em;
-    ul{
-        padding-top: 3em;
+    ul {
+        padding-top: 1em;
         list-style-type: none;
-        text-align: center;
-        li{
+        text-align: left;
+        li {
             padding: 0.5em;
             font-size: 1.2em;
-            input{
+            display: flex;
+            flex-direction: column;
+            input {
                 width: 20em;
                 height: 2em;
                 background-color: #B4BAA6;
-                border-radius: 2em;
+                border-radius: 1em;
+                margin-top: 0.5em;
+                padding-left: 0.5em;
             }
-            textarea{
-                width: 50em;
-                height: 20em;
+            textarea {
+                height: 10em;
+                background-color: #B4BAA6;
+                border-radius: 1em;
+                padding-left: 0.5em;
+                padding-top: 0.5em;
+                resize: none;
+
             }
         }
-        .infos-persos{
+        .infos-persos {
             display: flex;
-            justify-content: space-around;
+            justify-content: space-between;
+            .titleInput {
+            }
         }
     }
-    #mail-content{
-        input{
-            width: 80%;
-            background-color: white;
+    select {
+        background-color: #B4BAA6;
+        width: 46em;
+        height: 2em;
+        border-radius: 1em;
+        margin-top: 0.5em;
+        padding-left: 0.5em;
+    }
+    #mail-content {
+
+        button{
+            margin-left: 43em;
+            width: 4em;
+            height: 2em;
+            background-color: #B4BAA6;
+            border: none;
+            border-radius: 1em;
+            cursor: pointer;
+            justify-content: center;
+            img{
+                margin-top: 0.2em;
+                width: 1.5em;
+                height: 1.5em;
+                rotate: -90deg;
+            }
+        }
+        button:hover {
+            background-color: #A0A890;
         }
     }
 }
@@ -48,21 +84,41 @@
 #tel-adresse{
     display: flex;
     justify-content: space-around;
+    padding: 5em 30em;
     margin-bottom: 5em;
     hr{
         max-height: 30em;
+    }
+    #hLocation{
+        margin-top: 2em;
+    }
+    #hPhone{
+        margin-top: 1.2em;
+    }
+
+    #txtHorairesL{
+        margin-top: 1.3em;
+    }
+    #txtHorairesP{
+        margin-top: 5.6em;
     }
     .tel-adresse-carte{
         padding: 2em;
         padding-left: 5em;
         padding-right: 5em;
-        border-radius: 2em;
+        border-radius: 1.5em;
         background-color: #D9DBC6;
         margin: 2em;
         text-align: center;
         max-width: 15em;
+
         img{
-            width: 10em;
+            width: 9em;
+        }
+
+        span{
+
+            font-size: 0.6em;
         }
     }
 }
