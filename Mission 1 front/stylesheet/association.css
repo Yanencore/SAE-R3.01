@@ -46,8 +46,7 @@ h1 {
     font-family: "Lilita One", sans-serif;
     font-weight: 500;
     font-style: normal;
-    padding-top: 5vh;
-    padding-bottom: 8em;
+    padding: 5vh 13em 8em;
 
     h2 {
         padding-top: 1.6em;
