@@ -1,0 +1,133 @@
+body{
+    background-color: #F2F6CC;
+
+}
+
+#VosDroits{
+    background-color: #F2F6CC;
+    margin-top: 2em;
+    h1{
+
+        text-align: center;
+        font-size: 2.3em;
+        font-family: "Lilita One", sans-serif;
+        font-weight: 500;
+        font-style: normal;
+    }
+
+    ul{
+        display: flex;
+        list-style: none;
+    }
+
+    li{
+        img{
+            height: auto;
+            width: 27em;
+            margin-right: 4em;
+            margin-top: 4em;
+
+        }
+
+        p{
+            opacity: 70%;
+            margin-top: 2.3em;
+            margin-left: 4em;
+            font-size: 2.1em;
+            font-family: "Lilita One", sans-serif;
+            font-weight: 500;
+            font-style: normal;
+        }
+    }
+
+    #leRole{
+        margin-top: 3em;
+        margin-right: 10em;
+        margin-left: 10em;
+        opacity: 40%;
+        text-align: center;
+        font-size: 1.5em;
+        font-family: "Lilita One", sans-serif;
+        font-weight: 500;
+        font-style: normal;
+    }
+}
+
+
+#ErreurMedical {
+
+    background-color: #E1E6C2;
+    h1 {
+        padding: 1em;
+        margin-top: 1em;
+        margin-bottom: 1em;
+        text-align: center;
+        font-size: 2.3em;
+        font-family: "Lilita One", sans-serif;
+        font-weight: 500;
+        font-style: normal;
+    }
+
+    #carte{
+        display: flex;
+        justify-content: center;
+
+
+        #LesTypes {
+            padding: 1em;
+            display: flex;
+            margin-bottom: 5em;
+            border-radius: 2em;
+            background-color: #F6F6DB;
+            height: auto;
+            width: 40em;
+
+
+            #ulImg {
+                margin-top: 1em;
+
+                display: grid;
+                justify-content: center;
+                gap: 2em;
+                align-items: center;
+                flex-direction: column;
+                margin-bottom: 1em;
+
+                li{
+                    display: grid;
+                    grid-template-columns: 10em auto;
+                    align-items: center;
+                }
+
+                div {
+                    margin-left: 1em;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    background-color: #C1C1AB;
+                    height: 6em;
+                    width: 6em;
+                    border-radius: 1em;
+
+                    img {
+                        height: auto;
+                        width: 4.5em;
+                    }
+                }
+                p {
+                    font-size: 1.5em;
+                    font-family: "Lilita One", sans-serif;
+                    font-weight: 500;
+                    font-style: normal;
+                }
+            }
+
+
+        }
+
+    }
+
+
+
+
+}

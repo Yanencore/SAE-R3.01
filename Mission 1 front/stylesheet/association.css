@@ -202,7 +202,8 @@ h1 {
     display: flex;
     justify-content: center;
     button {
-        margin-left: 120em;
+
+        margin-left: 100em;
         margin-bottom: 2em;
         height: 6em;
         width: 6em;
@@ -211,6 +212,8 @@ h1 {
         box-shadow: 6px 6px 12px #d7cda6,
         -6px -6px 12px #fff5c6;
         border-radius: 15%;
+        cursor: pointer;
+
 
 
 
