@@ -5,6 +5,8 @@
     <title>Ce qu'il faut savoir | CADUS</title>
     <link rel="stylesheet" href="stylesheet/style.css">
     <link rel="stylesheet" href="stylesheet/ce-qu'il-faut-savoir.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="jquery.js"></script>
     <script src="menu.js"></script>
 
@@ -12,6 +14,9 @@
 <body>
 <header></header>
 
+<script>
+    AOS.init();
+</script>
 
 <div id="VosDroits">
     <h1>Vos Droits et Démarches en Cas d’Erreur Médicale</h1>
@@ -47,20 +52,20 @@
             <div>
                 <ul id="ulImg">
                     <li>
-                        <div><img src="images/ce_qu_il_faut_savoir/hospital.png" alt="Hospital"></div>
-                        <p>Infections Nosocomiales : contractées dans un établissement de santé.</p>
+                        <div data-aos="zoom-in-up" data-aos-duration="1500"><img src="images/ce_qu_il_faut_savoir/hospital.png" alt="Hospital"></div>
+                        <p><u>Infections Nosocomiales</u> : contractées dans un établissement de santé.</p>
                     </li>
                     <li>
-                        <div><img src="images/ce_qu_il_faut_savoir/medecin.png" alt="Medecin"></div>
-                        <p>Erreurs Médicales : diagnostic erroné, oubli de matériel, défaut d’information.</p>
+                        <div data-aos="zoom-in-up" data-aos-duration="1500"><img src="images/ce_qu_il_faut_savoir/medecin.png" alt="Medecin"></div>
+                        <p><u>Erreurs Médicales</u> : diagnostic erroné, oubli de matériel, défaut d’information.</p>
                     </li>
                     <li>
-                        <div><img src="images/ce_qu_il_faut_savoir/alerte.png" alt="Danger"></div>
-                        <p>Aléas Thérapeutiques : complications imprévisibles non imputables à une faute.</p>
+                        <div data-aos="zoom-in-up" data-aos-duration="1500"><img src="images/ce_qu_il_faut_savoir/alerte.png" alt="Danger"></div>
+                        <p><u>Aléas Thérapeutiques</u> : complications imprévisibles non imputables à une faute.</p>
                     </li>
                     <li>
-                        <div><img src="images/ce_qu_il_faut_savoir/medicament.png" alt="Medicaments"></div>
-                        <p>Effets Secondaires : liés à la prise de médicaments.</p>
+                        <div data-aos="zoom-in-up"data-aos-duration="1500"><img src="images/ce_qu_il_faut_savoir/medicament.png" alt="Medicaments"></div>
+                        <p><u>Effets Secondaires</u> : liés à la prise de médicaments.</p>
                     </li>
                 </ul>
 
@@ -75,8 +80,8 @@
     <ul id="ulTop">
         <li><img src="images/ce_qu_il_faut_savoir/folder.png" alt=""></li>
         <li>
-            <div>
-                <h1>Pourquoi le Dossier Médical est Essentiel</h1>
+            <div data-aos="fade-down"  data-aos-duration="1500">
+                <h2>Pourquoi le Dossier Médical est Essentiel</h2>
                 <p>Le dossier médical est une source d’informations précieuse pour toute démarche d’indemnisation.
                     Il contient les diagnostics, résultats d’examens, comptes rendus
                     opératoires et autres informations ayant contribué au parcours de soins du patient.
@@ -84,11 +89,11 @@
             </div>
         </li>
     </ul>
-    <ul>
+    <ul id="ulBottom">
         <li>
-            <div id="Acceder">
-                <h1>Comment Accéder à Votre Dossier Médical ?</h1>
-                <p>La loi du 4 mars 2002 permet aux patients de demander leur dossier médical. Pour y accéder :</p>
+            <div id="Acceder" data-aos="fade-left" data-aos-duration="1500">
+                <h2>Comment Accéder à Votre Dossier Médical ?</h2>
+                <h3>La loi du 4 mars 2002 permet aux patients de demander leur dossier médical. Pour y accéder :</h3>
                 <ul>
                     <li>Faites une demande écrite, idéalement en lettre recommandée avec accusé de réception (RAR).</li>
                     <li>Établissements publics : adressez-vous au directeur de l’établissement.</li>
@@ -97,8 +102,8 @@
             </div>
         </li>
         <li>
-            <div id="doc">
-                <h1>Votre demande de dossier médical peut inclure les documents suivants :</h1>
+            <div id="doc" data-aos="fade-right"data-aos-duration="1500">
+                <h2>Votre demande de dossier médical peut inclure les documents suivants :</h2>
                 <ul>
                     <li>Rapports de votre médecin traitant </li>
                     <li>Résultats de tests et examens médicaux</li>

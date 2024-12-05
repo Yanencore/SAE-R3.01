@@ -131,3 +131,135 @@ body{
 
 
 }
+
+
+#DossierMedical{
+    h1{
+        margin-top: 1em;
+        text-align: center;
+        font-size: 2.3em;
+        font-family: "Lilita One", sans-serif;
+        font-weight: 500;
+        font-style: normal;
+    }
+
+    ul{
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    #ulTop{
+        gap: 10em;
+        padding-top: 3em;
+        img{
+            height: auto;
+            width: 25em;
+        }
+
+        div{
+
+            background-color: #E1E6C2;
+            border-radius: 2em;
+            height: 13em;
+            width: 36em;
+            padding: 1.5em;
+
+            h2{
+                text-align: left;
+                font-size: 2em;
+                font-family: "Lilita One", sans-serif;
+                font-weight: 500;
+                font-style: normal;
+            }
+
+            p{
+                padding-top: 1em;
+                font-family: "Libre Franklin", sans-serif;
+                font-weight: 500;
+                font-style: normal;
+                font-size: 1.5em;
+            }
+        }
+    }
+
+    #ulBottom{
+        gap: 5em;
+        margin-top: 1em;
+        #Acceder{
+            margin-bottom: 5em;
+            background-color: #E1E6C2;
+            border-radius: 2em;
+            height: 19em;
+            width: 36em;
+            padding: 1.4em;
+
+            h2{
+                text-align: center;
+                font-size: 1.9em;
+                font-family: "Lilita One", sans-serif;
+                font-weight: 500;
+                font-style: normal;
+
+            }
+
+            h3{
+                text-align: center;
+                font-family: "Libre Franklin", sans-serif;
+                font-weight: 500;
+                font-style: normal;
+                font-size: 1.4em;
+            }
+
+            ul{
+                gap: 0.75em;
+                padding: 1em;
+                display: grid;
+                list-style: circle;
+                font-family: "Libre Franklin", sans-serif;
+                font-weight: 500;
+                font-style: normal;
+                font-size: 1.4em;
+
+            }
+        }
+
+        #doc{
+            background-color: #E1E6C2;
+            border-radius: 2em;
+            height: 23em;
+            width: 20em;
+            padding: 1em;
+            margin-bottom: 2em;
+
+            h2{
+                text-align: center;
+                font-size: 1.7em;
+                font-family: "Lilita One", sans-serif;
+                font-weight: 500;
+                font-style: normal;
+
+            }
+
+            ul{
+                gap: 0.5em;
+                margin-left: 12%;
+                padding: 1em;
+                display: grid;
+                list-style: circle;
+                font-family: "Libre Franklin", sans-serif;
+                font-weight: 500;
+                font-style: normal;
+                font-size: 1.4em;
+
+            }
+
+        }
+
+
+
+    }
+
+}
