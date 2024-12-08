@@ -29,6 +29,7 @@ h1 {
     }
 
     img {
+        margin-top: 1em;
         height: 23em;
     }
     @media only screen and (max-width: 47em) {
@@ -51,7 +52,7 @@ h1 {
     h2 {
         padding-top: 1.6em;
         padding-bottom: 0.8em;
-        font-size: 3.5em;
+        font-size: 2.7em;
     }
 
     div {
@@ -60,7 +61,7 @@ h1 {
 
         p {
             width: 27em;
-            font-size: 3.2em;
+            font-size: 2.4em;
             opacity: 66%;
         }
     }
@@ -69,6 +70,10 @@ h1 {
 
 
 #aide {
+
+    #content{
+        transform: scale(0.8);
+    }
     background-color: #EEF3CD;
 
     h1 {
@@ -173,7 +178,6 @@ h1 {
 }
 
 #textContainer{
-    padding: 0 2em;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -205,8 +209,8 @@ h1 {
 
         margin-left: 100em;
         margin-bottom: 2em;
-        height: 6em;
-        width: 6em;
+        height: 5em;
+        width: 5em;
         border: none;
         background: #ECE1B6;
         box-shadow: 6px 6px 12px #d7cda6,
