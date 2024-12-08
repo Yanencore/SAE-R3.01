@@ -70,20 +70,16 @@ body {
 
 footer {
     background-color: #C1C1AB;
-    display: grid;
+    display: flex;
+    justify-content: center;
     grid-template-columns: auto auto auto;
     font-size: 1em;
     font-family: "Jua", sans-serif;
     font-weight: 400;
     font-style: normal;
-    img {
-        height: 2em;
 
-    }
     p{
         display: flex;
-        align-items: center;
-        justify-content: center;
         opacity: 0.45
     }
 }
