@@ -1,13 +1,11 @@
 body{
     background-color: #F2F6CC;
-
 }
 
 #VosDroits{
     background-color: #F2F6CC;
     margin-top: 2em;
     h1{
-
         text-align: center;
         font-size: 2.3em;
         font-family: "Lilita One", sans-serif;
@@ -28,10 +26,10 @@ body{
             margin-top: 4em;
 
         }
-
         p{
+
             opacity: 70%;
-            margin-top: 2.3em;
+            margin-top: 4em;
             margin-left: 4em;
             font-size: 2.1em;
             font-family: "Lilita One", sans-serif;
@@ -55,7 +53,6 @@ body{
 
 
 #ErreurMedical {
-
     background-color: #E1E6C2;
     h1 {
         padding: 1em;
@@ -72,7 +69,6 @@ body{
         display: flex;
         justify-content: center;
 
-
         #LesTypes {
             padding: 1em;
             display: flex;
@@ -82,10 +78,8 @@ body{
             height: auto;
             width: 40em;
 
-
             #ulImg {
                 margin-top: 1em;
-
                 display: grid;
                 justify-content: center;
                 gap: 2em;
@@ -108,7 +102,6 @@ body{
                     height: 6em;
                     width: 6em;
                     border-radius: 1em;
-
                     img {
                         height: auto;
                         width: 4.5em;
@@ -142,15 +135,12 @@ body{
         font-weight: 500;
         font-style: normal;
     }
-
     ul{
         list-style: none;
         display: flex;
         justify-content: center;
         align-items: center;
-
     }
-
     #ulTop{
         gap: 10em;
         padding-top: 3em;
@@ -160,7 +150,6 @@ body{
         }
 
         div{
-
             background-color: #E1E6C2;
             border-radius: 2em;
             height: 13em;
@@ -260,6 +249,124 @@ body{
 
 
 
+    }
+
+}
+
+#Pourquoi_CADUS{
+    background-color: #F8FAE3;
+    h1{
+        padding: 1em;
+        text-align: center;
+        font-size: 2.3em;
+        font-family: "Lilita One", sans-serif;
+        font-weight: 500;
+        font-style: normal;
+    }
+
+    #global{
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 4em;
+        gap: 2em;
+
+        #association{
+            margin-left: 36em;
+            background-color: #D4D3B6;
+            border-radius: 2em;
+            height: 27em;
+            width: 42em;
+            padding: 1.2em;
+
+            h2{
+                font-size: 1.7em;
+                font-family: "Lilita One", sans-serif;
+                font-weight: 500;
+                font-style: normal;
+
+            }
+
+            ul{
+                gap: 0.75em;
+                padding: 1em;
+                display: grid;
+                list-style: circle;
+                font-family: "Lilita One", sans-serif;
+                font-weight: 500;
+                font-style: normal;
+                font-size: 1.5em;
+            }
+
+            p{
+                opacity: 50%;
+                padding-top: 1em;
+                font-size: 1.3em;
+                font-family: "Lilita One", sans-serif;
+                font-weight: 500;
+                font-style: normal;
+            }
+        }
+
+        #FaireAppel{
+            margin-right: 20em;
+            background-color: #D4D3B6;
+            border-radius: 2em;
+            height: 20em;
+            width: 14em;
+            padding: 1em;
+
+            p{
+                text-align: center;
+                font-size: 1.26em;
+                font-family: "Lilita One", sans-serif;
+                font-weight: 500;
+                font-style: normal;
+            }
+
+        }
+    }
+    #div-btn{
+        margin-top: 1em;
+        margin-left: 50em;
+        padding-bottom: 5em;
+        display: flex;
+        justify-content: center;
+        gap: 1em;
+        #img_contact{
+
+            background-color: #D4D3B6;
+            border-radius: 1em;
+            height: 5em;
+            width: 5em;
+            padding: 1em;
+            display: flex;
+            justify-content: center;
+
+            img{
+                scale: 100%;
+            }
+        }
+        button{
+            cursor: pointer;
+            background-color: #E1E6C2;
+            border-radius: 1em;
+            border: none;
+            height: 5em;
+            width: 5em;
+            padding: 1em;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            img{
+                scale: 9%;
+            }
+        }
+        button:hover{
+            background-color: #e0e0d0;
+            transform: scale(1.1);
+            transition: 0.5s;
+        }
     }
 
 }
