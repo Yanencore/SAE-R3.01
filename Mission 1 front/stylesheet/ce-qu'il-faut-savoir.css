@@ -255,8 +255,11 @@ body{
 
 #Pourquoi_CADUS{
     background-color: #F8FAE3;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     h1{
-        padding: 1em;
+        padding: 1em 5em;
         text-align: center;
         font-size: 2.3em;
         font-family: "Lilita One", sans-serif;
@@ -271,7 +274,6 @@ body{
         gap: 2em;
 
         #association{
-            margin-left: 30em;
             background-color: #D4D3B6;
             border-radius: 2em;
             height: 27em;
@@ -308,7 +310,7 @@ body{
         }
 
         #FaireAppel{
-            margin-right: 20em;
+
             background-color: #D4D3B6;
             border-radius: 2em;
             height: 20em;
