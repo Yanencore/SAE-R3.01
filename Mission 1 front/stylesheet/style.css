@@ -50,7 +50,13 @@ body {
         height: 90%;
         margin-left: 1em;
     }
+    li #votreEspace:hover a svg {
+        transform: rotate(180deg);
+        transition: transform 0.4s ease;
+    }
+
 }
+
 
 #navText li {
     display: flex;
@@ -60,12 +66,56 @@ body {
         padding: 0 2vh;
         font-size: 1.2em;
     }
+
 }
+
+
 
 #contact {
     background-color: #A8B48E;
     padding: 0 1vh;
     margin-left: 2vh;
+}
+
+
+
+.logpanel {
+    margin-top: 11em;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    background-color: #D8E1C5;
+    border-radius: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    height: auto;
+    width: 10em;
+    padding: 0.5em;
+
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+
+}
+
+li:hover .logpanel {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.login-options {
+    gap: 1em;
+    display: flex;
+    flex-direction: column;
+    p{
+
+        font-size: 0.7em;
+        display: flex;
+        align-items: center;
+        font-family: "Libre Franklin", sans-serif;
+        font-optical-sizing: auto;
+        font-style: normal;
+
+    }
 }
 
 footer {
