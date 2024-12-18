@@ -1,0 +1,56 @@
+body{
+    background-color: #F6FCE5;
+
+}
+
+#global{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#hCreerUnCompte {
+    font-size: 3.5em;
+    margin-top: 1em;
+    font-family: "Lilita One", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+#formInsciption{
+    form{
+        background-color: #D9DBC6;
+        margin: 5em auto;
+        width: 20em;
+        border-radius: 2em;
+        align-items: center;
+        padding: 2em;
+    }
+}
+
+#midhr{
+    max-height: 15em;
+}
+
+#tel{
+    width: 10em;
+    padding: 2em 5em;
+    border-radius: 1.5em;
+    background-color: #D9DBC6;
+    margin: 2em;
+    text-align: center;
+    max-width: 15em;
+
+    img{
+        width: 9em;
+    }
+
+    span{
+
+        font-size: 0.6em;
+    }
+    #txtHorairesP{
+        margin-top: 5.6em;
+    }
+}
