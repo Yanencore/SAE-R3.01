@@ -54,6 +54,10 @@ body {
         transform: rotate(180deg);
         transition: transform 0.4s ease;
     }
+    li #votreEspace:hover .logpanel {
+        opacity: 1;
+        transform: translateY(0);
+    }
 
 }
 
@@ -97,10 +101,7 @@ body {
 
 }
 
-li:hover .logpanel {
-    opacity: 1;
-    transform: translateY(0);
-}
+
 
 .login-options {
     gap: 1em;
