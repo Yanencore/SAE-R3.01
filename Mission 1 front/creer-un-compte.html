@@ -15,33 +15,44 @@
         <h1 id="hCreerUnCompte">Créer un compte</h1>
         <div id="formInsciption">
             <form>
-                <label>Nom*</label>
-                <input type="text" id="nom" name="nom" placeholder="Dupont">
-                <br/>
-                <label>Prénom*</label>
-                <input type="text" id="prenom" name="prenom" placeholder="Jean">
-                <br/>
-                <label>Email*</label>
-                <input type="email" id="mail" name="mail" placeholder="jeandupont@gmail.com">
-                <br/>
-                <hr>
-                <label>Mot-de-Passe*</label>
-                <input type="password" id="mot-de-passe" name="mot-de-passe" placeholder="********">
-                <br/><label>Confirmation mot-de-passe*</label>
-                <input type="password" id="conf-mot-de-passe" name="conf-mot-de-passe" placeholder="********">
-                <br/>
-                <input type="submit" value="créer un compte">
+                <ul>
+                    <li>
+                        <label>Nom*</label>
+                        <input type="text" id="nom" class="label-input" name="nom" placeholder="Dupont">
+                    </li>
+                    <li>
+                        <label>Prénom*</label>
+                        <input type="text" id="prenom" class="label-input" name="prenom" placeholder="Jean">
+                    </li>
+                    <li>
+                        <label>Email*</label>
+                        <input type="email" id="mail" class="label-input" name="mail" placeholder="jeandupont@gmail.com">
+                    </li>
+                    <hr>
+                    <li>
+                        <label>Mot-de-Passe*</label>
+                        <input type="password" id="mot-de-passe" class="label-input" name="mot-de-passe">
+                        <p>Votre mot de passe doit contenir au moins 8 caractères, 1 lettre majuscule et 1 chiffre.</p>
+                    </li>
+                    <li>
+                        <label>Confirmer mot-de-passe*</label>
+                        <input type="password" id="conf-mot-de-passe" class="label-input" name="conf-mot-de-passe">
+                    </li>
+                    <li>
+                        <input id="submit-input" type="submit" value="créer un compte">
+                    </li>
+                </ul>
             </form>
         </div>
 
         <hr id="midhr">
 
-        <h2>besoin d'assistance ?</h2>
+        <h2>Besoin d'assistance ?</h2>
         <div id="tel">
             <img src="images/contact/icon-mobile.png" alt="">
             <h1 id="hPhone">
                 Mobile :<br>
-                <span>02 41 45 18 45</span>
+                <span><u>02 41 45 18 45</u></span>
             </h1>
             <p id="txtHorairesP">De Lundi à Samedi, entre 8h et 19h.</p>
         </div>
