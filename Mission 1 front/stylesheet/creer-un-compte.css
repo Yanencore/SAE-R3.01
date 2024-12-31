@@ -48,6 +48,15 @@ body{
                 font-style: normal;
 
             }
+            #password-error {
+                color: red;
+                padding: 0.3em;
+                font-size: 0.9em;
+                font-family: "Lilita One", sans-serif;
+                font-style: normal;
+                display: none;
+            }
+
 
             #submit-input{
                 width: 12em;
