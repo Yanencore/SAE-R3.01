@@ -1,3 +1,11 @@
+<?php
+if (!session_id()) {
+    session_start();
+}
+$emailError = $_SESSION['errors']['email'] ?? null;
+unset($_SESSION['errors']);
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -28,6 +36,10 @@
                     <li>
                         <label>Email*</label>
                         <input type="email" id="mail" class="label-input" name="email" placeholder="jeandupont@gmail.com" required>
+                        <?php if ($emailError): ?>
+                            <span class="error-text"><?=htmlspecialchars($emailError)?></span>
+                            <span class="error-text"><a href="connexion.html">Connectez-vous ici.</a></span>
+                        <?php endif; ?>
                     </li>
                     <hr>
                     <li>
@@ -38,7 +50,7 @@
                     <li>
                         <label>Confirmer mot-de-passe*</label>
                         <input type="password" id="conf-mot-de-passe" class="label-input" name="conf-mot-de-passe" required>
-                        <span id="password-error>Les mots de passe ne correspondent pas.</span>
+                        <span id="password-error" class="error-text" style="display: none;">Les mots de passe ne correspondent pas.</span>
                     </li>
                     <li>
                         <input id="submit-input" type="submit" name="submit" value="créer un compte">

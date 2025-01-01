@@ -16,7 +16,6 @@ class UserBddMySQL implements IUserBDD {
             "INSERT INTO users (nom,prenom,email,password) VALUES (:nom,:prenom,:email,:password)"
         );
 
-
         return $stmt->execute([
             'nom' => $user->getNom(),
             'prenom' => $user->getPrenom(),

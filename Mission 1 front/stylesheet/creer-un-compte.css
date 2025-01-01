@@ -48,13 +48,12 @@ body{
                 font-style: normal;
 
             }
-            #password-error {
+            .error-text {
                 color: red;
-                padding: 0.3em;
+                padding: 0.4em;
                 font-size: 0.9em;
                 font-family: "Lilita One", sans-serif;
                 font-style: normal;
-                display: none;
             }
 
 
