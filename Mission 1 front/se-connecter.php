@@ -1,28 +1,39 @@
+<?php
+if (!session_id()) {
+    session_start();
+}
+$logError = $_SESSION['errors']['logIn'] ?? null;
+unset($_SESSION['errors']);
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>CADUS | Sign in</title>
     <link rel="stylesheet" href="stylesheet/style.css">
-    <link rel="stylesheet" href="stylesheet/connexion.css">
+    <link rel="stylesheet" href="stylesheet/se-connecter.css">
     <script src="scripts/jquery.js"></script>
     <script src="scripts/menu.js"></script>
+    <script src="scripts/formSignIn.js"></script>
 </head>
 <body>
   <header></header>
   <div id="global">
     <h1 id="hSeConnecter">Se connecter</h1>
     <div id="formConnexion">
-      <form>
+      <form method="post" action="app/logIn.php">
         <ul>
           <li>
             <label>Email</label>
-            <input type="email" id="mail" class="label-input" name="mail" placeholder="">
+            <input type="email" id="mail" class="label-input" name="email" placeholder="" required>
           </li>
           <li>
             <label>Mot-de-Passe</label>
-            <input type="password" id="mot-de-passe" class="label-input" name="mot-de-passe">
-
+            <input type="password" id="mot-de-passe" class="label-input" name="mot-de-passe" required>
+              <?php if ($logError): ?>
+                  <span class="error-text"><?=htmlspecialchars($logError)?></span>
+              <?php endif; ?>
           </li>
           <li>
             <a href=""><u>mot de passe oublié ?</u></a>

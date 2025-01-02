@@ -15,7 +15,7 @@ unset($_SESSION['errors']);
     <link rel="stylesheet" href="stylesheet/creer-un-compte.css">
     <script src="scripts/jquery.js"></script>
     <script src="scripts/menu.js"></script>
-    <script src="scripts/form.js"></script>
+    <script src="scripts/formSignUp.js"></script>
 </head>
 <body>
 <header></header>
@@ -23,7 +23,7 @@ unset($_SESSION['errors']);
     <div id="global">
         <h1 id="hCreerUnCompte">Créer un compte</h1>
         <div id="formInsciption">
-            <form method="post" action="app/inscription.php">
+            <form method="post" action="app/signUp.php">
                 <ul>
                     <li>
                         <label>Nom*</label>
@@ -38,7 +38,7 @@ unset($_SESSION['errors']);
                         <input type="email" id="mail" class="label-input" name="email" placeholder="jeandupont@gmail.com" required>
                         <?php if ($emailError): ?>
                             <span class="error-text"><?=htmlspecialchars($emailError)?></span>
-                            <span class="error-text"><a href="connexion.html">Connectez-vous ici.</a></span>
+                            <span class="error-text"><a href="se-connecter.php">Connectez-vous ici.</a></span>
                         <?php endif; ?>
                     </li>
                     <hr>
