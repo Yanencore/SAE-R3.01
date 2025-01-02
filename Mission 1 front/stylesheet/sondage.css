@@ -1,0 +1,60 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: #F6FCE5;
+    font-size: larger;
+    font-family: 'Franklin Gothic', 'Arial Narrow', Arial, sans-serif;
+}
+
+h1{
+    text-align: center;
+    font-size: 3.5em;
+    margin-bottom: 2vh;
+    font-weight: 500;
+    font-style: normal;
+}
+h2{
+    margin-bottom: 2vh;
+}
+
+legend{
+    font-size: 1.2em;
+    margin-top: 0.8em;
+    font-weight: 500;
+    font-style: normal;
+}
+
+fieldset{
+    background-color: #D9DBC6;
+    border-radius: 10px;
+    margin-left: 5vw;
+    margin-right: 5vw;
+    margin-bottom: 2vh;
+    box-shadow: 2px 2px 2px;
+    padding: 2vw;
+}
+
+select{
+    height: 4vh;
+    background-color: #B4BAA6;
+    border-radius: 10px;
+    color: white;
+    font-weight: bold;
+}
+
+input{
+    background-color: #B4BAA6;
+    color: white;
+    font-weight: bold;
+}
+button{
+    margin-left: 5vw;
+    margin-right: 5vw;
+    margin-bottom: 2vh;
+    width: 5vw;
+    height: 4vh;
+    background-color: #B4BAA6;
+}
