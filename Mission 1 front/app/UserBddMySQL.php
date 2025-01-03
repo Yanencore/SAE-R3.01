@@ -36,4 +36,28 @@ class UserBddMySQL implements IUserBDD {
         }
         return null;
     }
+
+    /**
+     * @throws \Random\RandomException
+     */
+    public function createUserToken(string $email): string{
+        $token = bin2hex(random_bytes(32));
+        $this->mySqlConnexion->exec("UPDATE users SET token = '$token' WHERE email = '$email'");
+        return $token;
+    }
+
+    public function isUserConnected(): bool{
+
+        if (isset($_COOKIE['email']) && isset($_COOKIE['token'])){
+            $email = $_COOKIE['email'];
+            $token = $_COOKIE['token'];
+
+            $stmt = $this->mySqlConnexion->query("SELECT * FROM users WHERE email = '$email' AND token = '$token'");
+            $result = $stmt->fetch();
+            if ($result['id'])
+                return true;
+        }
+        return false;
+    }
+
 }

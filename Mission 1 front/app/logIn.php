@@ -20,9 +20,12 @@ if ($_SERVER["REQUEST_METHOD"] === "POST"){
 
     if ($email != "" && $password != ""){
         try {
-            $auth->authenticate($email,$password);
-            $user = $trousseau->findUserByEmail($email);
-            echo "Bonjour" . " " . $user->getNom() ." ". $user->getPrenom();
+            if ($auth->authenticate($email,$password)){
+                setcookie("token",$trousseau->createUserToken($email), time() + 3600,"/");
+                setcookie("email",$email,time()+3600, "/",);
+                header("Location: ../mon-espace.php");
+                exit();
+            }
         }
         catch (Exception $e){
             $logError = $e->getMessage();

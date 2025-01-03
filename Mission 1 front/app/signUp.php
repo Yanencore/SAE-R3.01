@@ -15,13 +15,16 @@ $emailError = null;
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $nom = trim($_POST['nom']);
     $prenom = trim($_POST['prenom']);
-    $email = trim($_POST['email']);
-    $password = $_POST['mot-de-passe'];
+    $email = filter_var($_POST['email'], FILTER_SANITIZE_EMAIL);
+    $password = htmlspecialchars($_POST['mot-de-passe'], ENT_QUOTES, 'UTF-8');
     $confPassword = $_POST['conf-mot-de-passe'];
 
     try {
         $auth->register($nom, $prenom, $email, $password, $confPassword);
         $_SESSION['flash']['success'] = "Inscription réussie";
+        setcookie("token",$trousseau->createUserToken($email), time() + 3600,"/");
+        setcookie("email",$email,time()+3600, "/",);
+        header("Location: ../mon-espace.php");
         exit;
     } catch (Exception $e) {
 
