@@ -1,60 +1,110 @@
-* {
-    margin: 0;
-    padding: 0;
-}
 
-body{
+body {
     background-color: #F6FCE5;
-    font-size: larger;
-    font-family: 'Franklin Gothic', 'Arial Narrow', Arial, sans-serif;
 }
 
-h1{
-    text-align: center;
+
+
+#global{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 15em;
+    padding-top: 5em;
+
+}
+h1 {
+    margin-bottom: 1em;
     font-size: 3.5em;
-    margin-bottom: 2vh;
+    font-family: "Lilita One", sans-serif;
     font-weight: 500;
     font-style: normal;
 }
-h2{
-    margin-bottom: 2vh;
-}
-
-legend{
-    font-size: 1.2em;
-    margin-top: 0.8em;
-    font-weight: 500;
-    font-style: normal;
-}
-
-fieldset{
+form {
     background-color: #D9DBC6;
-    border-radius: 10px;
-    margin-left: 5vw;
-    margin-right: 5vw;
-    margin-bottom: 2vh;
-    box-shadow: 2px 2px 2px;
-    padding: 2vw;
+    border-radius: 1em;
+    padding: 2em;
+    width: 80%;
+    max-width: 30em;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    font-size: 1em;
+    font-family: "Libre Franklin", sans-serif;
+    font-style: normal;
+
+
+    h2{
+        padding: 1em;
+        font-size: 1.5em;
+
+    }
+    textarea {
+        resize: none;
+    }
+
 }
 
-select{
-    height: 4vh;
-    background-color: #B4BAA6;
-    border-radius: 10px;
-    color: white;
-    font-weight: bold;
+fieldset {
+    border: none;
+    display: none;
+    opacity: 0;
+    transform: translateX(-50%);
+    transition: opacity 0.5s ease, transform 0.5s ease;
 }
 
-input{
-    background-color: #B4BAA6;
-    color: white;
-    font-weight: bold;
+fieldset.active {
+    display: block;
+    opacity: 1;
+    transform: translateX(0);
 }
+
 button{
-    margin-left: 5vw;
-    margin-right: 5vw;
-    margin-bottom: 2vh;
-    width: 5vw;
-    height: 4vh;
     background-color: #B4BAA6;
+    color: white;
+    font-weight: bold;
+    padding: 10px 20px;
+    margin: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+
+button:hover {
+    background-color: #8E9478;
+}
+
+button.hidden {
+    display: none;
+}
+
+.form-navigation {
+    text-align: right;
+    margin-top: 1em;
+}
+
+
+a{
+    #btnExit{
+        margin-top: 9em;
+        background-color: #E1E6C2;
+        border-radius: 1em;
+        border: none;
+        height: 5em;
+        width: 5em;
+        padding: 1em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        img{
+            scale: 9%;
+        }
+    }
+    #btnExit:hover{
+        background-color: #e0e0d0;
+        transform: scale(1.1);
+        transition: 0.5s;
+    }
 }
