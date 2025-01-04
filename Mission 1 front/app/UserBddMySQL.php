@@ -60,4 +60,11 @@ class UserBddMySQL implements IUserBDD {
         return false;
     }
 
+    public function deteleYourAccount(): void{
+        $token = $_COOKIE['token'];
+        $this->mySqlConnexion->exec("DELETE FROM users WHERE token ='$token'");
+        setcookie("token","",time() - 3600, '/');
+        setcookie("email","",time() - 3600, '/');
+    }
+
 }

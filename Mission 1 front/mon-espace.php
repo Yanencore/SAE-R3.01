@@ -37,12 +37,12 @@ $user = $trousseau->findUserByEmail($_COOKIE['email']);
                 <li>Email :</li>
                 <li><div class="user-info"><?=htmlspecialchars($user->getEmail())?></div></li>
             </ul>
-            <a href="deleteUser.php"><button><u>clôturer votre compte</u></button></a>
+            <a href="app/deleteAccount.php"><button><u>clôturer votre compte</u></button></a>
         </div>
 
         <div id="enquetes">
 
-            <a href="sondage.html">
+            <a href="sondage.php">
                 <div>
                     <h2>Enquête sur la qualité de vie, l'insertion sociale et les besoins de soutien</h2>
                     <h3><u>Date de sortie : 03/01/2025</u><svg width="15" height="15" viewBox="0 0 15 15" fill="none"
