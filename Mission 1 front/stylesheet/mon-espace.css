@@ -1,0 +1,122 @@
+body{
+    background-color: #F6FCE5;
+
+}
+#global{
+    display: flex;
+    justify-content: center;
+
+
+    padding: 9em;
+
+    #profile{
+        display: flex;
+        flex-direction: column;
+        background-color: #D9DBC6;
+        border-radius: 1em;
+        padding: 1em;
+        height: 31em;
+        width: 15em;
+
+        ul{
+            overflow: hidden;
+            margin-left: 0.3em;
+            list-style: none;
+            font-family: "Lilita One", sans-serif;
+            font-size: 1.2em;
+            font-weight: 500;
+            font-style: normal;
+            padding-left: 1em;
+
+
+            .user-info{
+                padding: 0.2em;
+                display: flex;
+                align-items: center;
+                text-align: center;
+                background-color: #CED5BF;
+                border-radius: 1em;
+                height: 2em;
+                width: 10em;
+                opacity: 70%;
+
+            }
+        }
+        img{
+            scale: 50%;
+
+        }
+        a{
+            button{
+                color: red;
+                margin-top: 1.3em;
+                margin-left: 1.6em;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 0.2em;
+                background-color: #CED5BF;
+                border-radius: 1em;
+                height: 2em;
+                width: 15em;
+                cursor: pointer;
+                transition: background-color 0.3s ease, color 0.3s ease;
+            }
+            button:hover {
+                background-color: #AEB4A2;
+                color: white;
+            }
+        }
+    }
+
+    #enquetes{
+        a{
+            text-decoration: none;
+            color: inherit;
+
+            div{
+                margin-left: 2em;
+                margin-bottom: 1em;
+                display: flex;
+                flex-direction: column;
+                background-color: #D9DBC6;
+                border-radius: 2em;
+                padding: 2em;
+                height: 7.7em;
+                width: 50em;
+                transition: background-color 0.3s ease, box-shadow 0.3s ease;
+
+
+
+                h2{
+
+                    font-family: "Lilita One", sans-serif;
+                    font-size: 1.5em;
+                    font-weight: 500;
+
+                }
+                h3{
+                    padding: 0.2em;
+                    font-family: "Libre Franklin", sans-serif;
+                    font-weight: 500;
+                    font-size: 1em;
+                    opacity: 70%;
+
+                    svg{
+                        padding-left: 1em;
+                    }
+                }
+                p{
+                    font-family: "Libre Franklin", sans-serif;
+                    font-size: 1.3em;
+                }
+            }
+            div:hover {
+                background-color: #CED5BF;
+                box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+                transform: scale(1.02);
+            }
+        }
+
+    }
+}
