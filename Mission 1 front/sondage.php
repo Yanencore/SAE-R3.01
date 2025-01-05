@@ -30,7 +30,7 @@ if (!$trousseau->isUserConnected()){
 
     <div id="global">
         <h1>Sondage</h1>
-        <form action="/" method="post">
+        <form action="app/surveyData.php" method="post">
             <!-- Qui a répondu à l’enquête ? -->
             <fieldset class="form-step active">
                 <h2>1. Vôtre situation</h2>
@@ -106,7 +106,7 @@ if (!$trousseau->isUserConnected()){
                     <option value="Instruction en famille">Instruction en famille</option>
                     <option value="Scolarite dans une etablissement medico-social">Scolarité dans une établissement médico-social (IME, IMPRO...)</option>
                     <option value="Formation professionnelle">Formation professionnelle</option>
-                    <option value="Etudes superieurs">Etudes supérieurs</option>
+                    <option value="Etudes supérieures">Etudes supérieures</option>
                     <option value="Activite professionnelle en milieu ordinaire">Activité professionnelle en milieu ordinaire</option>
                     <option value="Activite professionnelle en milieu protege">Activité professionnelle en milieu protegé</option>
                     <option value="Autre">Autre</option>
@@ -118,7 +118,7 @@ if (!$trousseau->isUserConnected()){
                 <label for="activite_sociale_oui">Oui</label><br>
                 <input type="radio" id="activite_sociale_non" name="activite_sociale" value="non" onclick="const field = document.getElementById('activite_sociale'); field.disabled = true;">
                 <label for="activite_sociale_non">Non</label><br><br>
-                <textarea id="activite_sociale" name="activite_sociale" rows="8" cols="63" placeholder="Décrivez vos activités..." disabled></textarea>
+                <textarea id="activite_sociale" name="activite_sociale_desc" rows="8" cols="63" placeholder="Décrivez vos activités..." disabled></textarea>
             </fieldset>
 
             <!-- Qualité de vie -->
@@ -158,8 +158,6 @@ if (!$trousseau->isUserConnected()){
             </button>
         </a>
     </div>
-
-
     <footer></footer>
 </body>
 </html>
