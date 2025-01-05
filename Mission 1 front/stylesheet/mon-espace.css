@@ -105,6 +105,9 @@ body{
                     svg{
                         padding-left: 1em;
                     }
+                    .no{
+                        padding-left: 1.4em;
+                    }
                 }
                 p{
                     font-family: "Libre Franklin", sans-serif;

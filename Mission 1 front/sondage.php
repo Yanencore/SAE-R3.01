@@ -8,7 +8,13 @@ $trousseau = new UserBddMySQL($pdo);
 
 if (!$trousseau->isUserConnected()){
     header("Location: se-connecter.php");
+    exit();
 }
+if ($trousseau->didTheSurvey()){
+    header("Location: mon-espace.php");
+    exit();
+}
+
 ?>
 
 <!DOCTYPE html>

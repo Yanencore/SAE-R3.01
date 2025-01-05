@@ -1,5 +1,20 @@
 <?php
 require_once 'BddConnect.php';
+require_once 'UserBddMySQL.php';
+$bdd = new BddConnect();
+$pdo = $bdd->connexion();
+$trousseau = new UserBddMySQL($pdo);
+
+if (!$trousseau->isUserConnected()){
+    header("Location: ../se-connecter.php");
+    exit();
+}
+
+if ($trousseau->didTheSurvey()) {
+    header("Location: ../mon-espace.php");
+    exit();
+}
+
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
@@ -18,10 +33,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $satisfaction = $_POST['satisfaction'] ?? null;
     $soutien = isset($_POST['soutien']) && $_POST['soutien'] === 'oui' ? 1 : 0;
     $description_soutien = $_POST['soutien_precision'] ?? null;
-
-
-    $bdd = new BddConnect();
-    $pdo = $bdd->connexion();
+    $user_id = $trousseau->getUserId();
 
     try {
 
@@ -47,11 +59,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 INSERT INTO sondage (
                 age, sexe, region_id, type_habitat, cdaph_orientation, choix_vie, 
                 activite_professionnelle, type_activite_id, activite_sociale, 
-                satisfaction, soutien, description_activite_sociale, description_soutien) 
+                satisfaction, soutien, description_activite_sociale, description_soutien, user_id) 
                 VALUES (
                 :age, :sexe, :region_id, :type_habitat, :cdaph_orientation, :choix_vie, 
                 :activite_professionnelle, :type_activite_id, :activite_sociale, 
-                :satisfaction, :soutien, :description_sociale, :description_soutien )");
+                :satisfaction, :soutien, :description_sociale, :description_soutien, :user_id)");
 
 
         $stmt->execute([
@@ -68,6 +80,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             ':soutien' => $soutien,
             ':description_sociale' => $description_sociale,
             ':description_soutien' => $description_soutien,
+            ':user_id' => $user_id,
         ]);
 
         echo "Les données ont été enregistrées avec succès.";

@@ -67,4 +67,29 @@ class UserBddMySQL implements IUserBDD {
         setcookie("email","",time() - 3600, '/');
     }
 
+    public function getUserId(): ?int{
+        if ($this->isUserConnected()){
+            $email = $_COOKIE['email'];
+            $token = $_COOKIE['token'];
+            $stmt = $this->mySqlConnexion->query("SELECT * FROM users WHERE email = '$email' AND token = '$token'");
+            $result = $stmt->fetch();
+            return $result['id'];
+        }
+        return null;
+    }
+
+    public function didTheSurvey(): bool{
+        $user_id = $this->getUserId();
+        $stmt = $this->mySqlConnexion->prepare("SELECT id FROM sondage WHERE user_id = '$user_id'");
+        $stmt->execute();
+
+        $result = $stmt->fetch(PDO::FETCH_ASSOC);
+        if ($result) {
+            return true;
+        }
+
+        return false;
+    }
+
+
 }
