@@ -2,9 +2,9 @@
 if(!session_id())
     session_start();
 
-require_once 'BddConnect.php';
-require_once 'UserBddMySQL.php';
-require_once 'Authentification.php';
+require_once '../app/BddConnect.php';
+require_once '../app/UserBddMySQL.php';
+require_once '../app/Authentification.php';
 
 $bdd = new BddConnect();
 $pdo = $bdd->connexion();
@@ -18,16 +18,16 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $email = filter_var($_POST['email'], FILTER_SANITIZE_EMAIL);
     $password = htmlspecialchars($_POST['mot-de-passe'], ENT_QUOTES, 'UTF-8');
     $confPassword = $_POST['conf-mot-de-passe'];
-
+    
     try {
         $auth->register($nom, $prenom, $email, $password, $confPassword);
         $_SESSION['flash']['success'] = "Inscription réussie";
         setcookie("token",$trousseau->createUserToken($email), time() + 3600,"/");
         setcookie("email",$email,time()+3600, "/",);
-        header("Location: ../mon-espace.php");
-        exit;
+//        header("Location: ./mon-espace.php");
+//        exit;
     } catch (Exception $e) {
-
+        echo ' crash';
         if (str_contains($e->getMessage(), 'déjà enregistré')) {
             $emailError = "Cet email est déjà associé à un compte.";
         }
@@ -36,6 +36,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 $_SESSION['errors'] = ['email' => $emailError,];
 
-header("Location: ../creer-un-compte.php");
-exit;
+//header("Location: ../creer-un-compte.php");
+//exit;
 

@@ -7,10 +7,10 @@ class BddConnect {
     protected string $dbname;
 
     public function __construct() {
-        $this->host = "localhost:3306";
-        $this->login = "root";
-        $this->password = "root";
-        $this->dbname = "schema_name";
+        $this->host = "188.245.209.226";
+        $this->login = "mariadbtest";
+        $this->password = "test";
+        $this->dbname = "sae208";
     }
 
     public function connexion() : \PDO {

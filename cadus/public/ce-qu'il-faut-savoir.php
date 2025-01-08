@@ -1,14 +1,14 @@
+<?php
+require_once './header.php';
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Ce qu'il faut savoir | CADUS</title>
-    <link rel="stylesheet" href="stylesheet/style.css">
-    <link rel="stylesheet" href="stylesheet/ce-qu'il-faut-savoir.css">
+    <link rel="stylesheet" href="assets/css/ce-qu'il-faut-savoir.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="scripts/jquery.js"></script>
-    <script src="scripts/menu.js"></script>
 
 </head>
 <body>
@@ -32,7 +32,7 @@
             </p>
         </li>
         <li>
-            <img src="images/ce_qu_il_faut_savoir/balance.png" alt="Balance">
+            <img src="assets/img/ce_qu_il_faut_savoir/balance.png" alt="Balance">
         </li>
     </ul>
     <p id="leRole">Le rôle de l’association C.A.D.U.S. est d’offrir un soutien et une expertise juridique
@@ -52,19 +52,19 @@
             <div>
                 <ul id="ulImg">
                     <li>
-                        <div data-aos="zoom-in-up" data-aos-duration="1500"><img src="images/ce_qu_il_faut_savoir/hospital.png" alt="Hospital"></div>
+                        <div data-aos="zoom-in-up" data-aos-duration="1500"><img src="assets/img/ce_qu_il_faut_savoir/hospital.png" alt="Hospital"></div>
                         <p><u>Infections Nosocomiales</u> : contractées dans un établissement de santé.</p>
                     </li>
                     <li>
-                        <div data-aos="zoom-in-up" data-aos-duration="1500"><img src="images/ce_qu_il_faut_savoir/medecin.png" alt="Medecin"></div>
+                        <div data-aos="zoom-in-up" data-aos-duration="1500"><img src="assets/img/ce_qu_il_faut_savoir/medecin.png" alt="Medecin"></div>
                         <p><u>Erreurs Médicales</u> : diagnostic erroné, oubli de matériel, défaut d’information.</p>
                     </li>
                     <li>
-                        <div data-aos="zoom-in-up" data-aos-duration="1500"><img src="images/ce_qu_il_faut_savoir/alerte.png" alt="Danger"></div>
+                        <div data-aos="zoom-in-up" data-aos-duration="1500"><img src="assets/img/ce_qu_il_faut_savoir/alerte.png" alt="Danger"></div>
                         <p><u>Aléas Thérapeutiques</u> : complications imprévisibles non imputables à une faute.</p>
                     </li>
                     <li>
-                        <div data-aos="zoom-in-up"data-aos-duration="1500"><img src="images/ce_qu_il_faut_savoir/medicament.png" alt="Medicaments"></div>
+                        <div data-aos="zoom-in-up"data-aos-duration="1500"><img src="assets/img/ce_qu_il_faut_savoir/medicament.png" alt="Medicaments"></div>
                         <p><u>Effets Secondaires</u> : liés à la prise de médicaments.</p>
                     </li>
                 </ul>
@@ -78,7 +78,7 @@
 <div id="DossierMedical">
     <h1>Accéder à Votre Dossier Médical</h1>
     <ul id="ulTop">
-        <li><img src="images/ce_qu_il_faut_savoir/folder.png" alt=""></li>
+        <li><img src="assets/img/ce_qu_il_faut_savoir/folder.png" alt=""></li>
         <li>
             <div data-aos="fade-down"  data-aos-duration="1500">
                 <h2>Pourquoi le Dossier Médical est Essentiel</h2>
@@ -154,19 +154,18 @@
 
     <div id="div-btn" >
         <div id="img_contact">
-            <img src="images/ce_qu_il_faut_savoir/contact-us.png" alt="contact">
+            <img src="assets/img/ce_qu_il_faut_savoir/contact-us.png" alt="contact">
         </div>
 
-        <a href="contact.html">
+        <a href="contact.php">
             <button>
-                <img src="images/ce_qu_il_faut_savoir/more.png" alt="">
+                <img src="assets/img/ce_qu_il_faut_savoir/more.png" alt="">
             </button>
         </a>
     </div>
 </div>
-
-<footer></footer>
-
-
 </body>
+<?php
+require_once './footer.html';
+?>
 </html>

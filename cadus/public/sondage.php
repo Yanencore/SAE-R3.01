@@ -1,7 +1,7 @@
 <?php
-require_once 'app/User.php';
-require_once 'app/UserBddMySQL.php';
-require_once 'app/BddConnect.php';
+require_once '../app/User.php';
+require_once '../app/UserBddMySQL.php';
+require_once '../app/BddConnect.php';
 $bdd = new BddConnect();
 $pdo = $bdd->connexion();
 $trousseau = new UserBddMySQL($pdo);
@@ -10,6 +10,8 @@ if (!$trousseau->isUserConnected()){
     header("Location: se-connecter.php");
     exit();
 }
+require_once './header.php';
+
 if ($trousseau->didTheSurvey()){
     header("Location: mon-espace.php");
     exit();
@@ -24,19 +26,14 @@ if ($trousseau->didTheSurvey()){
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sondage</title>
-    <link rel="stylesheet" href="stylesheet/sondage.css">
-    <link rel="stylesheet" href="stylesheet/style.css">
-    <script src="scripts/jquery.js"></script>
-    <script src="scripts/menu.js"></script>
-    <script src="scripts/sondage.js"></script>
+    <link rel="stylesheet" href="assets/css/sondage.css">
+    <script src="assets/js/sondage.js"></script>
 </head>
 
 <body>
-    <header></header>
-
     <div id="global">
         <h1>Sondage</h1>
-        <form action="app/surveyData.php" method="post">
+        <form action="../app/surveyData.php" method="post">
             <!-- Qui a répondu à l’enquête ? -->
             <fieldset class="form-step active">
                 <h2>1. Vôtre situation</h2>
@@ -160,10 +157,9 @@ if ($trousseau->didTheSurvey()){
 
         <a href="mon-espace.php">
             <button id="btnExit">
-                <img src="images/sondage/croix.png" alt="sortir">
+                <img src="assets/img/sondage/croix.png" alt="sortir">
             </button>
         </a>
     </div>
-    <footer></footer>
 </body>
 </html>

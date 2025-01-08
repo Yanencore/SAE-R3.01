@@ -1,6 +1,6 @@
 <?php
 
-require_once "User.php";
+require_once "../app/User.php";
 class Authentification {
 
     private IUserBDD $userBDD;
@@ -21,7 +21,6 @@ class Authentification {
         if($this->userBDD->findUserByEmail($email)) {
             throw new \Exception("Utilisateur déjà enregistré");
         }
-
         $user = new User($nom,$prenom,$email, $password);
         return $this->userBDD->saveUser($user);
 

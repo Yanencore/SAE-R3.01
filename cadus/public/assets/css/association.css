@@ -30,7 +30,7 @@ h1 {
 
     img {
         margin-top: 1em;
-        height: 23em;
+        height: 24em;
     }
     @media only screen and (max-width: 47em) {
         img {

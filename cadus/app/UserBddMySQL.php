@@ -1,26 +1,23 @@
 <?php
 
-require_once "IUserBdd.php";
+require_once "../app/IUserBdd.php";
 class UserBddMySQL implements IUserBDD {
 
     private PDO $mySqlConnexion;
-
     public function __construct(\PDO $mySqlConnexion) {
         $this->mySqlConnexion = $mySqlConnexion;
     }
 
-
-
     public function saveUser(User $user) : bool {
+        var_dump($user);
         $stmt = $this->mySqlConnexion->prepare(
-            "INSERT INTO users (nom,prenom,email,password) VALUES (:nom,:prenom,:email,:password)"
+            'insert into users (iduser, prenom, nom, email, passwd) values (7, :nom, :prenom, :email, :passwd);'
         );
-
         return $stmt->execute([
             'nom' => $user->getNom(),
             'prenom' => $user->getPrenom(),
             'email' => $user->getEmail(),
-            'password' => password_hash($user->getPassword(), PASSWORD_DEFAULT),
+            'passwd' => password_hash($user->getPassword(), PASSWORD_DEFAULT),
         ]);
     }
 

@@ -2,9 +2,9 @@
 if(!session_id())
     session_start();
 
-require_once 'BddConnect.php';
-require_once 'UserBddMySQL.php';
-require_once 'Authentification.php';
+require_once '../app/BddConnect.php';
+require_once '../app/UserBddMySQL.php';
+require_once '../app/Authentification.php';
 
 $bdd = new BddConnect();
 $pdo = $bdd->connexion();

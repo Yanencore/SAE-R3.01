@@ -1,7 +1,7 @@
 <?php
-require_once 'app/User.php';
-require_once 'app/UserBddMySQL.php';
-require_once 'app/BddConnect.php';
+require_once '../app/User.php';
+require_once '../app/UserBddMySQL.php';
+require_once '../app/BddConnect.php';
 $bdd = new BddConnect();
 $pdo = $bdd->connexion();
 $trousseau = new UserBddMySQL($pdo);
@@ -12,6 +12,8 @@ if (!$trousseau->isUserConnected()){
 $user = $trousseau->findUserByEmail($_COOKIE['email']);
 $aRepondu1 = $trousseau->didTheSurvey();
 
+require_once './header.php';
+
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -19,17 +21,13 @@ $aRepondu1 = $trousseau->didTheSurvey();
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact | Mon espace</title>
-    <link rel="stylesheet" href="stylesheet/style.css">
-    <link rel="stylesheet" href="stylesheet/mon-espace.css">
-    <script src="scripts/jquery.js"></script>
-    <script src="scripts/menu.js"></script>
+    <link rel="stylesheet" href="assets/css/mon-espace.css">
 </head>
 <body>
-    <header></header>
     <div id="global">
 
         <div id="profile">
-            <img src="images/mon-espace/profil.png"  alt="profile">
+            <img src="assets/img/mon-espace/profil.png" alt="profile">
             <ul>
                 <li>Nom :</li>
                 <li><div class="user-info"><?=htmlspecialchars($user->getNom())?></div></li>
@@ -38,7 +36,7 @@ $aRepondu1 = $trousseau->didTheSurvey();
                 <li>Email :</li>
                 <li><div class="user-info"><?=htmlspecialchars($user->getEmail())?></div></li>
             </ul>
-            <a href="app/deleteAccount.php"><button><u>clôturer votre compte</u></button></a>
+            <a href="../app/deleteAccount.php"><button><u>clôturer votre compte</u></button></a>
         </div>
 
         <div id="enquetes">
@@ -72,9 +70,10 @@ $aRepondu1 = $trousseau->didTheSurvey();
                     </p>
                 </div>
             </a>
-
         </div>
     </div>
-    <footer></footer>
 </body>
+<?php
+require_once './footer.html';
+?>
 </html>

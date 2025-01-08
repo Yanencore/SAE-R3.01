@@ -1,14 +1,14 @@
+<?php
+require_once './header.php';
+?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>l'Association | CADUS</title>
-    <link rel="stylesheet" href="stylesheet/style.css">
-    <link rel="stylesheet" href="stylesheet/association.css">
-    <script src="scripts/jquery.js"></script>
-    <script src="scripts/menu.js"></script>
-    <script src="scripts/associationBtn.js"></script>
+    <link rel="stylesheet" href="assets/css/association.css">
+    <script src="assets/js/associationBtn.js"></script>
 </head>
 <body>
     <header></header>
@@ -21,7 +21,7 @@
             <li class="letterColor">USAGERS <span class="article">de la</span></li>
             <li class="letterColor">SANTÉ</li>
         </ul>
-        <img src="images/association/doctor.png" alt="image medecin">
+        <img src="assets/img/association/doctor.png" alt="image medecin">
     </div>
 
     <div id="But">
@@ -55,24 +55,24 @@
             <div id="container">
                 <ul id= "boutonAide">
                     <li>
-                        <button id="BtnDossier" class ="NeumorphismButton active" ><img src="images/association/folder.png" alt="image-dossier"></button>
+                        <button id="BtnDossier" class ="NeumorphismButton active" ><img src="assets/img/association/folder.png" alt="image-dossier"></button>
                         <span>Elaboration d’un dossier médical</span>
                     </li>
                     <li>
-                        <button id="BtnIndemn" class="NeumorphismButton"><img src="images/association/give-money.png" alt="image-indemnisation"></button>
+                        <button id="BtnIndemn" class="NeumorphismButton"><img src="assets/img/association/give-money.png" alt="image-indemnisation"></button>
                         <span>L’indemnisation de vos préjudices</span>
                     </li>
                     <li>
-                        <button id="BtnJur" class="NeumorphismButton"><img src="images/association/auction.png" alt="image-tribunal"></button>
+                        <button id="BtnJur" class="NeumorphismButton"><img src="assets/img/association/auction.png" alt="image-tribunal"></button>
                         <span>Assistance juridique et droits des victimes</span>
                     </li>
                     <li>
-                        <button id="BtnNego" class="NeumorphismButton"><img src="images/association/relationship.png" alt="image-négociation"></button>
+                        <button id="BtnNego" class="NeumorphismButton"><img src="assets/img/association/relationship.png" alt="image-négociation"></button>
                         <span>Négociation et résolution des conflits</span>
                     </li>
                 </ul>
                 <div id="img-note">
-                    <img src="images/association/note.png" alt="image-bloc-note">
+                    <img src="assets/img/association/note.png" alt="image-bloc-note">
                 </div>
             </div>
 
@@ -86,9 +86,12 @@
 
 
         <div id="BtnMore">
-            <a href="ce-qu'il-faut-savoir.html"><button><img src="images/association/more.png" alt="more"></button></a>
+            <a href="ce-qu'il-faut-savoir.php"><button><img src="assets/img/association/more.png" alt="more"></button></a>
         </div>
     </div>
     <footer></footer>
 </body>
+<?php
+require_once './footer.html';
+?>
 </html>
