@@ -15,8 +15,8 @@ require_once './header.php';
 <div id="formulaire-contact">
 
     <form>
-        <ul>
-            <div class="infos-persos">
+        <div class="grid">
+            <ul>
                 <li>
                     <label for="lastname">Nom*</label> <br>
                     <input type="text" id="lastname" placeholder="Dupont">
@@ -25,8 +25,8 @@ require_once './header.php';
                     <label for="firstname">Prénom*</label> <br>
                     <input type="text" id="firstname" placeholder="Jean">
                 </li>
-            </div>
-            <div class="infos-persos">
+            </ul>
+            <ul>
                 <li>
                     <label for="email">Email*</label> <br>
                     <input type="text" id="email" placeholder="jeandupont@gmail.com">
@@ -35,14 +35,12 @@ require_once './header.php';
                     <label for="phone">Téléphone</label> <br>
                     <input type="tel" id="phone" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}">
                 </li>
-            </div>
-
-        </ul>
-
+            </ul>
+        </div>
         <div id="mail-content">
             <ul>
                 <li>
-                    <label>Sujet</label> <br>
+                    <label for="subject ">Sujet</label> <br>
                     <select name="Sujet" id="subject ">
                         <option value="RDV">Demande de rendez-vous</option>
                         <option value="Jur">Conseil juridique</option>
@@ -51,7 +49,7 @@ require_once './header.php';
                     </select>
                 </li>
                 <li>
-                    <label>Votre message</label> <br>
+                    <label for="message-content">Votre message</label> <br>
                     <textarea name="message" id="message-content"></textarea>
                 </li>
                 <li>
