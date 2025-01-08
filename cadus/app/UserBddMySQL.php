@@ -11,7 +11,7 @@ class UserBddMySQL implements IUserBDD {
     public function saveUser(User $user) : bool {
         var_dump($user);
         $stmt = $this->mySqlConnexion->prepare(
-            'insert into users values (nextval(seq_PK_users), :nom, :prenom, :email, :passwd);'
+            'insert into users (user_id, prenom, nom, email, passwd) values (nextval(seq_PK_users), :nom, :prenom, :email, :passwd);'
         );
         return $stmt->execute([
             'nom' => $user->getNom(),
@@ -51,7 +51,7 @@ class UserBddMySQL implements IUserBDD {
 
             $stmt = $this->mySqlConnexion->query("SELECT * FROM users WHERE email = '$email' AND token = '$token'");
             $result = $stmt->fetch();
-            if ($result['id'])
+            if ($result['user_id'])
                 return true;
         }
         return false;
@@ -70,14 +70,14 @@ class UserBddMySQL implements IUserBDD {
             $token = $_COOKIE['token'];
             $stmt = $this->mySqlConnexion->query("SELECT * FROM users WHERE email = '$email' AND token = '$token'");
             $result = $stmt->fetch();
-            return $result['id'];
+            return $result['user_id'];
         }
         return null;
     }
 
     public function didTheSurvey(): bool{
         $user_id = $this->getUserId();
-        $stmt = $this->mySqlConnexion->prepare("SELECT id FROM sondage WHERE user_id = '$user_id'");
+        $stmt = $this->mySqlConnexion->prepare("SELECT user_id FROM sondage WHERE user_id = '$user_id'");
         $stmt->execute();
 
         $result = $stmt->fetch(PDO::FETCH_ASSOC);

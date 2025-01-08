@@ -8,7 +8,7 @@ create table users (
                        nom varchar(50),
                        email varchar(50),
                        passwd varchar(200),
-                       token varchar(32),
+                       token varchar(50),
                        primary key (user_id)
 );
 create table sondage (

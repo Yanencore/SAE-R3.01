@@ -11,6 +11,8 @@ $pdo = $bdd->connexion();
 $trousseau = new UserBddMySQL($pdo);
 $auth = new Authentification($trousseau);
 $emailError = null;
+$host  = $_SERVER['HTTP_HOST'];
+$uri   = rtrim(dirname($_SERVER['PHP_SELF']), '/\\');
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $nom = trim($_POST['nom']);
@@ -24,7 +26,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $_SESSION['flash']['success'] = "Inscription réussie";
         setcookie("token",$trousseau->createUserToken($email), time() + 3600,"/");
         setcookie("email",$email,time()+3600, "/",);
-        header("Location: ./mon-espace.php");
+        header("Location: http://$host$uri/mon-espace.php");
         exit;
     } catch (Exception $e) {
         echo $e->getMessage();
@@ -36,6 +38,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 $_SESSION['errors'] = ['email' => $emailError,];
 
-header("Location: ../creer-un-compte.php");
+header("Location: http://$host$uri/creer-un-compte.php");
 exit;
 
