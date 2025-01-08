@@ -29,7 +29,7 @@ class UserBddMySQL implements IUserBDD {
         $result = $stmt->fetch(\PDO::FETCH_ASSOC);
 
         if($result) {
-            return new User($result['nom'],$result['prenom'],$result['email'], $result['password']);
+            return new User($result['nom'],$result['prenom'],$result['email'], $result['passwd']);
         }
         return null;
     }

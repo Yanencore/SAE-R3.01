@@ -23,11 +23,11 @@ require_once './header.php';
         <form method="post" action="logIn.php">
             <ul>
                 <li>
-                    <label>Email</label>
+                    <label for="mail">Email</label>
                     <input type="email" id="mail" class="label-input" name="email" placeholder="" required>
                 </li>
                 <li>
-                    <label>Mot-de-Passe</label>
+                    <label for="mot-de-passe">Mot-de-Passe</label>
                     <input type="password" id="mot-de-passe" class="label-input" name="mot-de-passe" required>
                     <?php if ($logError): ?>
                         <span class="error-text"><?= htmlspecialchars($logError) ?></span>
@@ -38,7 +38,7 @@ require_once './header.php';
                 </li>
                 <li>
                     <input type="checkbox" id="showPswd"/>
-                    <label>Afficher le mot de passe</label>
+                    <label for="showPswd">Afficher le mot de passe</label>
                 </li>
                 <li>
                     <input id="submit-input" type="submit" value="connexion">
