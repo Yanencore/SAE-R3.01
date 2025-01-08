@@ -20,7 +20,6 @@ if ($trousseau->didTheSurvey()){
 ?>
 
 <!DOCTYPE html>
-<!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
@@ -33,7 +32,7 @@ if ($trousseau->didTheSurvey()){
 <body>
     <div id="global">
         <h1>Sondage</h1>
-        <form action="../app/surveyData.php" method="post">
+        <form action="surveyData.php" method="post">
             <!-- Qui a répondu à l’enquête ? -->
             <fieldset class="form-step active">
                 <h2>1. Vôtre situation</h2>
@@ -127,7 +126,7 @@ if ($trousseau->didTheSurvey()){
             <!-- Qualité de vie -->
             <fieldset class="form-step">
                 <h2>3. Qualité de vie</h2>
-                <label>Sur une échelle de 1 à 10, comment évaluez-vous votre qualité de vie ?</label>
+                <label for="satisfaction">Sur une échelle de 1 à 10, comment évaluez-vous votre qualité de vie ?</label>
                 <br>
                 <br>
                 <br>

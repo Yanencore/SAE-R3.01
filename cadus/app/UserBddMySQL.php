@@ -57,7 +57,7 @@ class UserBddMySQL implements IUserBDD {
         return false;
     }
 
-    public function deteleYourAccount(): void{
+    public function deleteYourAccount(): void{
         $token = $_COOKIE['token'];
         $this->mySqlConnexion->exec("DELETE FROM users WHERE token ='$token'");
         setcookie("token","",time() - 3600, '/');

@@ -36,7 +36,7 @@ require_once './header.php';
                 <li>Email :</li>
                 <li><div class="user-info"><?=htmlspecialchars($user->getEmail())?></div></li>
             </ul>
-            <a href="../app/deleteAccount.php"><button><u>clôturer votre compte</u></button></a>
+            <a href="deleteAccount.php"><button><u>clôturer votre compte</u></button></a>
         </div>
 
         <div id="enquetes">

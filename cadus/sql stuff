@@ -2,22 +2,44 @@ drop sequence seq_PK_users;
 create sequence seq_PK_users start with 1 increment by 1;
 drop table sondage;
 drop table users;
-create table users (
-                       user_id int,
-                       prenom varchar(50),
-                       nom varchar(50),
-                       email varchar(50),
-                       passwd varchar(200),
-                       token varchar(50),
-                       primary key (user_id)
+drop table types_activite;
+drop table regions;
+create table users
+(
+    user_id int primary key ,
+    prenom  varchar(50),
+    nom     varchar(50),
+    email   varchar(50),
+    passwd  varchar(200),
+    token   varchar(300)
 );
-create table sondage (
-                         age int,
-                         sexe char(1),
-                         region_id int,
-                         type_habitat varchar(50),
-                         cdaph_orientation varchar(50), choix_vie varchar(50),
-                         activite_professionnelle varchar(50), type_activite_id varchar(50), activite_sociale varchar(50),
-                         satisfaction varchar(50), soutien varchar(50), description_activite_sociale varchar(200), description_soutien varchar(200), user_id int,
-                         foreign key (user_id) references users (user_id)
+create table regions
+(
+    region_id  int primary key ,
+    nom_region varchar(50)
+);
+create table types_activite
+(
+    type_activite_id  int primary key ,
+    nom_type_activite varchar(100)
+);
+create table sondage
+(
+    age                          int,
+    sexe                         char(1),
+    region_id                    int,
+    type_habitat                 varchar(50),
+    cdaph_orientation            varchar(50),
+    choix_vie                    varchar(50),
+    activite_professionnelle     varchar(50),
+    type_activite_id             int,
+    activite_sociale             varchar(50),
+    satisfaction                 varchar(50),
+    soutien                      varchar(50),
+    description_activite_sociale varchar(200),
+    description_soutien          varchar(200),
+    user_id                      int,
+    foreign key (user_id) references users (user_id),
+    foreign key (type_activite_id) references types_activite (type_activite_id),
+    foreign key (region_id) references regions (region_id)
 );

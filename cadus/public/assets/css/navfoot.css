@@ -33,7 +33,7 @@ body {
     right: 0;
     z-index: 10;
     font-weight: bold;
-    height: 5em;
+    height: 4em;
     * {
         height: inherit;
         list-style-type: none;

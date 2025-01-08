@@ -1,17 +1,17 @@
 <?php
-require_once 'BddConnect.php';
-require_once 'UserBddMySQL.php';
+require_once '../app/BddConnect.php';
+require_once '../app/UserBddMySQL.php';
 $bdd = new BddConnect();
 $pdo = $bdd->connexion();
 $trousseau = new UserBddMySQL($pdo);
 
 if (!$trousseau->isUserConnected()){
-    header("Location: ../se-connecter.php");
+    header("Location: ./se-connecter.php");
     exit();
 }
 
 if ($trousseau->didTheSurvey()) {
-    header("Location: ../mon-espace.php");
+    header("Location: ./mon-espace.php");
     exit();
 }
 
@@ -37,20 +37,20 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     try {
 
-        $stmtRegion = $pdo->query("SELECT id FROM regions WHERE nom_region = '$region_id'");
+        $stmtRegion = $pdo->query("SELECT region_id FROM regions WHERE nom_region = '$region_id'");
         $region = $stmtRegion->fetch();
         if (!$region) {
             die("La région spécifiée n'existe pas.");
         }
-        $region_id = $region['id'];
+        $region_id = $region['region_id'];
 
         if ($type_activite_id != null){
-            $stmtActivite = $pdo->query("SELECT id FROM types_activite WHERE nom_type_activite = '$type_activite_id'");
+            $stmtActivite = $pdo->query("SELECT type_activite_id FROM types_activite WHERE nom_type_activite = '$type_activite_id'");
             $activite = $stmtActivite->fetch();
             if (!$activite) {
                 die("Le type d'activité spécifié n'existe pas.");
             }
-            $type_activite_id = $activite['id'];
+            $type_activite_id = $activite['type_activite_id'];
         }
 
 
@@ -64,8 +64,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 :age, :sexe, :region_id, :type_habitat, :cdaph_orientation, :choix_vie, 
                 :activite_professionnelle, :type_activite_id, :activite_sociale, 
                 :satisfaction, :soutien, :description_sociale, :description_soutien, :user_id)");
-
-
+        
+        
+        
         $stmt->execute([
             ':age' => $age,
             ':sexe' => $sexe,
