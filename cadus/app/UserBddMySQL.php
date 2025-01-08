@@ -11,7 +11,7 @@ class UserBddMySQL implements IUserBDD {
     public function saveUser(User $user) : bool {
         var_dump($user);
         $stmt = $this->mySqlConnexion->prepare(
-            'insert into users (iduser, prenom, nom, email, passwd) values (7, :nom, :prenom, :email, :passwd);'
+            'insert into users values (nextval(seq_PK_users), :nom, :prenom, :email, :passwd);'
         );
         return $stmt->execute([
             'nom' => $user->getNom(),

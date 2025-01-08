@@ -24,10 +24,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $_SESSION['flash']['success'] = "Inscription réussie";
         setcookie("token",$trousseau->createUserToken($email), time() + 3600,"/");
         setcookie("email",$email,time()+3600, "/",);
-//        header("Location: ./mon-espace.php");
-//        exit;
+        header("Location: ./mon-espace.php");
+        exit;
     } catch (Exception $e) {
-        echo ' crash';
+        echo $e->getMessage();
         if (str_contains($e->getMessage(), 'déjà enregistré')) {
             $emailError = "Cet email est déjà associé à un compte.";
         }
@@ -36,6 +36,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 $_SESSION['errors'] = ['email' => $emailError,];
 
-//header("Location: ../creer-un-compte.php");
-//exit;
+header("Location: ../creer-un-compte.php");
+exit;
 
