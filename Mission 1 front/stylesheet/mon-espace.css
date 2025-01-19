@@ -30,6 +30,7 @@ body{
 
 
             .user-info{
+                overflow: hidden;
                 padding: 0.2em;
                 display: flex;
                 align-items: center;

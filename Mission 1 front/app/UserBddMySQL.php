@@ -54,7 +54,7 @@ class UserBddMySQL implements IUserBDD {
 
             $stmt = $this->mySqlConnexion->query("SELECT * FROM users WHERE email = '$email' AND token = '$token'");
             $result = $stmt->fetch();
-            if ($result['id'])
+            if ($result)
                 return true;
         }
         return false;
@@ -91,5 +91,16 @@ class UserBddMySQL implements IUserBDD {
         return false;
     }
 
+    public function isAdmin(): bool{
+        if ($this->isUserConnected()){
+            $email = $_COOKIE['email'];
+            $token = $_COOKIE['token'];
+            $stmt = $this->mySqlConnexion->query("SELECT * FROM users WHERE email = '$email' AND token = '$token'");
+            $result = $stmt->fetch();
+            if($result['isAdmin'] == 1)
+                return true;
+        }
+        return false;
+    }
 
 }
