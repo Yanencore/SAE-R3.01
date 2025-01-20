@@ -53,7 +53,7 @@ unset($_SESSION['errors']);
     <div id="div-btn">
       <a href="creer-un-compte.php">
         <button>
-          <img src="images/ce_qu_il_faut_savoir/more.png" alt="">
+          <img src="img/ce_qu_il_faut_savoir/more.png" alt="">
         </button>
       </a>
     </div>

@@ -63,7 +63,7 @@ unset($_SESSION['errors']);
 
         <h2>Besoin d'assistance ?</h2>
         <div id="tel">
-            <img src="images/contact/icon-mobile.png" alt="">
+            <img src="img/contact/icon-mobile.png" alt="">
             <h1 id="hPhone">
                 Mobile :<br>
                 <span><u>02 41 45 18 45</u></span>

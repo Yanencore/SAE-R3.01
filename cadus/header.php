@@ -13,7 +13,7 @@ $trousseau = new UserBddMySQL($pdo);
     <ul class="navFlex">
         <li>
             <a class="navFlex"   href="accueil.html">
-                <img src="images/accueil/cropped-128521182_861230594633479_523372672255009567_n-1-6-removebg-preview.png" alt="logo">
+                <img src="img/accueil/cropped-128521182_861230594633479_523372672255009567_n-1-6-removebg-preview.png" alt="logo">
             </a>
         </li>
         <li>

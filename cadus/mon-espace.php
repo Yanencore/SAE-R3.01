@@ -32,7 +32,7 @@ $aRepondu1 = $trousseau->didTheSurvey();
     <div id="global">
 
         <div id="profile">
-            <img src="images/mon-espace/profil.png"  alt="profile">
+            <img src="img/mon-espace/profil.png" alt="profile">
             <ul>
                 <li>Nom :</li>
                 <li><div class="user-info"><?=htmlspecialchars($user->getNom())?></div></li>

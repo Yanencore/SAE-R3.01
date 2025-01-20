@@ -160,7 +160,7 @@ if ($trousseau->didTheSurvey()){
 
         <a href="mon-espace.php">
             <button id="btnExit">
-                <img src="images/sondage/croix.png" alt="sortir">
+                <img src="img/sondage/croix.png" alt="sortir">
             </button>
         </a>
     </div>
