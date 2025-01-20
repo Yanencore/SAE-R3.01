@@ -9,6 +9,14 @@ class Authentification {
     }
 
     /**
+     * Enregistre un nouvel utilisateur dans la base de données
+     *
+     * @param string $nom Nom de l'utilisateur
+     * @param string $prenom Prénom de l'utilisateur
+     * @param string $email Email de l'utilisateur
+     * @param string $password Mot de passe
+     * @param string $repeat Confirmation du mot de passe
+     * @return bool
      * @throws \Exception
      */
     public function register(string $nom,string $prenom, string $email, string $password, string $repeat) : bool {
@@ -27,7 +35,14 @@ class Authentification {
 
     }
 
+
     /**
+     * Authentifie un utilisateur à l'aide de son email et mot de passe.
+     *
+     * @param string $email Email de l'utilisateur
+     * @param string $password Mot de passe
+     * @return true true si l'authentification fonctionne
+     *
      * @throws \Exception
      */
     public function authenticate(string $email, string $password) : true {
@@ -38,6 +53,12 @@ class Authentification {
         return true;
     }
 
+    /**
+     * Vérifie si un email est invalide.
+     *
+     * @param string $email Email à vérifier
+     * @return bool
+     */
     private function invalideEmail(string $email) : bool {
         return !filter_var($email, FILTER_VALIDATE_EMAIL);
     }

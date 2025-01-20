@@ -12,6 +12,8 @@ $trousseau = new UserBddMySQL($pdo);
 $auth = new Authentification($trousseau);
 $emailError = null;
 
+//SignUp.php récupère les données du formulaire d'inscription pour enregistrer un nouvel utilisateur.
+
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $nom = trim($_POST['nom']);
     $prenom = trim($_POST['prenom']);

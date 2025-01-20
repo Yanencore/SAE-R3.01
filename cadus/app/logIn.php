@@ -12,6 +12,7 @@ $trousseau = new UserBddMySQL($pdo);
 $auth = new Authentification($trousseau);
 $logError = null;
 
+//login.php gère la connexion de l'utilisateur.
 
 
 if ($_SERVER["REQUEST_METHOD"] === "POST"){

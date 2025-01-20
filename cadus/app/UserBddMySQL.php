@@ -38,6 +38,9 @@ class UserBddMySQL implements IUserBDD {
     }
 
     /**
+     * Crée un token aléatoire pour un utilisateur et le sauvegarde dans la base.
+     * @param string $email Email d'un utilisateur.
+     * @return string Token
      * @throws \Random\RandomException
      */
     public function createUserToken(string $email): string{
@@ -46,6 +49,10 @@ class UserBddMySQL implements IUserBDD {
         return $token;
     }
 
+    /**
+     * Vérifie si l'utilisateur est connecté via les cookies 'email et 'token'
+     * @return bool
+     */
     public function isUserConnected(): bool{
 
         if (isset($_COOKIE['email']) && isset($_COOKIE['token'])){
@@ -60,6 +67,9 @@ class UserBddMySQL implements IUserBDD {
         return false;
     }
 
+    /**
+     * Supprime le compte de l'utilisateur connecté.
+     */
     public function deteleYourAccount(): void{
         $token = $_COOKIE['token'];
         $this->mySqlConnexion->exec("DELETE FROM users WHERE token ='$token'");
@@ -67,6 +77,10 @@ class UserBddMySQL implements IUserBDD {
         setcookie("email","",time() - 3600, '/');
     }
 
+    /**
+     * Récupère l'ID de l'utilisateur connecté.
+     * @return int|null
+     */
     public function getUserId(): ?int{
         if ($this->isUserConnected()){
             $email = $_COOKIE['email'];
@@ -78,6 +92,10 @@ class UserBddMySQL implements IUserBDD {
         return null;
     }
 
+    /**
+     * Vérifie si l'utilisateur a déjà répondu au sondage.
+     * @return bool
+     */
     public function didTheSurvey(): bool{
         $user_id = $this->getUserId();
         $stmt = $this->mySqlConnexion->prepare("SELECT id FROM sondage WHERE user_id = '$user_id'");
@@ -91,6 +109,10 @@ class UserBddMySQL implements IUserBDD {
         return false;
     }
 
+    /**
+     * Vérifie si l'utilisateur connecté est un administrateur.
+     * @return bool
+     */
     public function isAdmin(): bool{
         if ($this->isUserConnected()){
             $email = $_COOKIE['email'];

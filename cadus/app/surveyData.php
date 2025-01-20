@@ -5,6 +5,8 @@ $bdd = new BddConnect();
 $pdo = $bdd->connexion();
 $trousseau = new UserBddMySQL($pdo);
 
+//surveyData.php récupère les données du formulaire et les enregistre dans la base de données.
+
 if (!$trousseau->isUserConnected()){
     header("Location: ../se-connecter.php");
     exit();
