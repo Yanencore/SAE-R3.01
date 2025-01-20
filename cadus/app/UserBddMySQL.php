@@ -13,7 +13,7 @@ class UserBddMySQL implements IUserBDD {
 
     public function saveUser(User $user) : bool {
         $stmt = $this->mySqlConnexion->prepare(
-            "INSERT INTO users (nom,prenom,email,password) VALUES (:nom,:prenom,:email,:password)"
+            "INSERT INTO users (nom,prenom,email,password,isAdmin) VALUES (:nom,:prenom,:email,:password,:isAdmin)"
         );
 
         return $stmt->execute([
@@ -21,6 +21,7 @@ class UserBddMySQL implements IUserBDD {
             'prenom' => $user->getPrenom(),
             'email' => $user->getEmail(),
             'password' => password_hash($user->getPassword(), PASSWORD_DEFAULT),
+            'isAdmin' => 0,
         ]);
     }
 

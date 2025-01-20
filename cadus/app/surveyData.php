@@ -86,6 +86,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         ]);
 
         echo "Les données ont été enregistrées avec succès.";
+        header("Location: ../mon-espace.php");
     } catch (PDOException $e) {
         echo "Erreur lors de l'enregistrement : " . $e->getMessage();
     }
